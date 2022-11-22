@@ -135,6 +135,30 @@ const routes: Routes = [
     path: 'job14',
     loadChildren: () => import('./job14/job14.module').then( m => m.Job14PageModule)
   },
+  {
+    path: 'basicprofile4',
+    loadChildren: () => import('./basicprofile4/basicprofile4.module').then( m => m.Basicprofile4PageModule)
+  },
+  {
+    path: 'basicprofile5',
+    loadChildren: () => import('./basicprofile5/basicprofile5.module').then( m => m.Basicprofile5PageModule)
+  },
+  {
+    path: 'addeducation',
+    loadChildren: () => import('./addeducation/addeducation.module').then( m => m.AddeducationPageModule)
+  },
+  {
+    path: 'basicprofile6',
+    loadChildren: () => import('./basicprofile6/basicprofile6.module').then( m => m.Basicprofile6PageModule)
+  },
+  {
+    path: 'completeprofilepopup',
+    loadChildren: () => import('./completeprofilepopup/completeprofilepopup.module').then( m => m.CompleteprofilepopupPageModule)
+  },
+  {
+    path: 'profile-preview',
+    loadChildren: () => import('./profile-preview/profile-preview.module').then( m => m.ProfilePreviewPageModule)
+  },
 ];
 
 @NgModule({

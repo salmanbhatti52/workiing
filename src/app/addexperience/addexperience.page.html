@@ -1,9 +1,65 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>addexperience</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
+  <div style="background: rgba(0, 0, 0, 0.8); height:100%; width:100%">
+    <div class="wrapper">
+      <div class="inner">
+        <div class="label">Position</div>
+        <div class="inputfield">
+          <ion-input class="input" type="text" placeholder="Position Title">
+          </ion-input>
+        </div>
+        <div class="label">Compnay Name</div>
+        <div class="inputfield">
+          <ion-input class="input" type="text" placeholder="Compnay Name">
+          </ion-input>
+        </div>
+        <div class="label">Category</div>
+        <div class="dropbox">
+          <div class="innerdropbox" (click)="openjobList()">
+            <div class="euro-text" style="width: 100%;">{{jobType}}</div>
+            <div class="imgdiv" style="padding-bottom: 2px; width: 5%;">
+              <ion-icon name="chevron-down-outline" *ngIf="showMaker==false"></ion-icon>
+              <ion-icon name="chevron-up-outline" *ngIf="showMaker==true"></ion-icon>
+            </div>
+          </div>
+          <div *ngIf="showMaker==true" style="height:auto ; overflow: scroll;">
+            <div *ngFor="let list of jobcategory; let i=index" (click)="selectcategory(list,i)">
+              <div class="euro-text1" [class.activeproduct]="list.active==true">{{list.job}}</div>
+            </div>
 
+          </div>
+        </div>
+        <div class="label">Duration</div>
+        <div class="inputfield">
+          <ion-input class="input" type="number" placeholder="Enter Duration">
+          </ion-input>
+        </div>
+
+        <div class="label">Is this your current position?</div>
+        <div style="margin: 20px 0px; display: flex">
+          <div (click)="optClickReply(opt)" [class.divcheck]="selectedoptIdReply == opt.id"
+            [class.divuncheck]="selectedoptIdReply != opt.id" *ngFor="let opt of optionArr">
+            <ion-label>{{opt.name}}</ion-label>
+            <img *ngIf="selectedoptIdReply == opt.id" class="imgsize" src="assets/imgs/checkwhite.svg" />
+            <img *ngIf="selectedoptIdReply != opt.id" class="imgsize" src="assets/imgs/checkgray.svg" />
+          </div>
+        </div>
+
+        <div class="label">Add Description (Optional)</div>
+        <div class="inputfield">
+          <ion-input class="input" type="text" placeholder="Write description...">
+          </ion-input>
+        </div>
+
+        <div style="margin-top: 5%;text-align: center;" (click)="next()">
+          <ion-button class="c-btn">Save</ion-button>
+        </div>
+      </div>
+    </div>
+  </div>
 </ion-content>

@@ -1,4 +1,6 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-basicprofile3',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Basicprofile3Page implements OnInit {
 
-  constructor() { }
+  constructor(public location: Location,
+    public navCtrl: NavController) { }
 
   ngOnInit() {
+  }
+
+  back() {
+    this.location.back()
+  }
+
+  add() {
+    this.navCtrl.navigateForward('addexperience');
   }
 
 }

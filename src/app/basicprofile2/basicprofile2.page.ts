@@ -1,4 +1,6 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-basicprofile2',
@@ -20,9 +22,14 @@ export class Basicprofile2Page implements OnInit {
   selectedoptIdReply = 0;
   selectedoptjob = 0;
   empsearch = 0;
-  constructor() { }
+  constructor(public location: Location,
+    public navCtrl: NavController) { }
 
   ngOnInit() {
+  }
+
+  back() {
+    this.location.back()
   }
 
   optClickReply(opt: any) {
@@ -37,4 +44,7 @@ export class Basicprofile2Page implements OnInit {
     this.empsearch = opt.id;
   }
 
+  next() {
+    this.navCtrl.navigateForward('basicprofile3')
+  }
 }

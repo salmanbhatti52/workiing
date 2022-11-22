@@ -26,6 +26,7 @@
 
 <ion-content>
   <div class="wrapper">
+    <div class="lbl">Basic</div>
     <div class="inputfield">
       <ion-input class="input" type="text" placeholder="First Name"><img style="margin:15px 7px 14px 15px;"
           src="/assets/imgs/user.svg"> </ion-input>
@@ -80,7 +81,7 @@
       <ion-input class="input" type="text" placeholder="Tx-21,  Crocket, TX"><img style="margin:15px 7px 14px 15px;"
           src="/assets/imgs/location-dot.svg"> </ion-input>
     </div>
-    <div style="margin-top: 5%;text-align: center;">
+    <div style="margin-top: 5%;text-align: center;" (click)="next()">
       <ion-button class="c-btn">Save & Next<span style="margin-left: 5px;
         margin-top: 5px;"><img src="assets/imgs/arrow-right.svg"></span></ion-button>
     </div>

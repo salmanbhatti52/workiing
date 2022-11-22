@@ -1,0 +1,64 @@
+<ion-header [translucent]="true" class="ion-no-border cheader">
+  <ion-toolbar class="headBgGlobal">
+    <ion-row class="center-icons">
+      <ion-col size="0.3"></ion-col>
+      <ion-col size="2">
+        <ion-buttons>
+          <div style="width:100%;" (click)="back()">
+            <img src="/assets/imgs/backbtn.svg">
+          </div>
+        </ion-buttons>
+      </ion-col>
+      <ion-col size="7">
+        <ion-label class="textcenter">Complete Profile</ion-label>
+      </ion-col>
+      <ion-col style="padding-top: 10px" size="2.6">
+
+        <img src="/assets/imgs/skiparrow.svg" style="margin-right:7%;">
+
+
+      </ion-col>
+
+    </ion-row>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <div class="wrapper">
+    <div class="lbl">All Star</div>
+
+    <div style="text-align: center;">
+      <img src="/assets/imgs/profileimg.svg">
+      <div class="text">Upload Profile Picture</div>
+    </div>
+
+    <div class="text2">Education (Optional)</div>
+
+    <div class="main">
+      <div class="left">
+        <div class="flex0">
+          <div style="width: 100%;">
+            <div class="maintxt">Institution <span class="spantxt">Institution of xyz</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <img src="assets/imgs/pen.svg" style="width: 14px;">
+      </div>
+      <div class="clear"></div>
+      <div class="text3">Description</div>
+      <div class="text4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+        consequat
+        duis enim velit mollit. Exercitation veniam</div>
+    </div>
+
+    <div style="width: 80%;
+    margin: 15% auto;">
+      <ion-button class="c-btn" (click)="nextto()">Add more Education<span style="margin-left: 5px;
+        margin-top: 5px;"><img src="assets/imgs/bluearrow.svg"></span></ion-button>
+      <ion-button class="c-btn1">Save & Preview<span style="margin-left: 5px;
+          margin-top: 5px;"><img src="assets/imgs/gray-rightarrow.svg"></span></ion-button>
+    </div>
+  </div>
+</ion-content>

@@ -45,6 +45,14 @@
   --height: 52%;
   background: rgba(0, 0, 0, 0.8) !important;
 }
+.profilePopupclass{
+  --border-radius: 30px;
+  --max-height: 50%;
+  --max-width: 80%;
+  --width: 80%;
+  --height: 50%;
+  background: rgba(0, 0, 0, 0.8) !important;
+}
 
 @media only screen and (max-width:375px)and (min-height:812px){
   .forgotPopupclass{

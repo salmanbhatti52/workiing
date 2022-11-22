@@ -55,4 +55,8 @@ export class BasicprofilePage implements OnInit {
     console.log('code===', this.countrycode)
   }
 
+  next() {
+    this.navCtrl.navigateForward('basicprofile2');
+  }
+
 }

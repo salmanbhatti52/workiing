@@ -3,7 +3,7 @@
     <ion-row class="center-icons">
       <ion-col size="0.3"></ion-col>
       <ion-col size="2">
-        <ion-buttons>
+        <ion-buttons (click)="back()">
           <div style="width:100%;">
             <img src="/assets/imgs/backbtn.svg">
           </div>
@@ -26,6 +26,7 @@
 
 <ion-content>
   <div class="wrapper">
+    <div class="lbl">Basic</div>
     <div class="text">Share your experience!</div>
     <div class="para">This is how Employers will see your experience</div>
     <div class="text2">Experience</div>
@@ -52,11 +53,18 @@
           <div class="text3">There is no work experience <br>please add it</div>
         </ion-col>
         <div style="margin-top: 5%;width: 100%;
-        text-align: center;">
+        text-align: center;" (click)="add()">
           <ion-button class="c-btn">Add Experience<span style="margin-left: 5px;
-            margin-top: 5px;"><img src="assets/imgs/arrow-right.svg"></span></ion-button>
+            margin-top:3px;"><img src="assets/imgs/arrow-right.svg"></span></ion-button>
         </div>
       </ion-row>
     </div>
   </div>
 </ion-content>
+<ion-footer class="ion-no-border">
+  <div style="margin: 5% auto;width:80%;
+  text-align: center;">
+    <ion-button class="c-btn1">Save & Next<span style="margin-left: 5px;
+      margin-top:3px;"><img src="assets/imgs/gray-rightarrow.svg"></span></ion-button>
+  </div>
+</ion-footer>
