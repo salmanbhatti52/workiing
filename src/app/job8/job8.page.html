@@ -1,0 +1,99 @@
+<ion-header [translucent]="true" class="ion-no-border cheader">
+  <ion-toolbar class="headBgGlobal">
+    <ion-row class="center-icons">
+      <ion-col size="2">
+        <ion-buttons>
+          <div style="width: 100%">
+            <img src="/assets/imgs/menu.svg" />
+          </div>
+        </ion-buttons>
+      </ion-col>
+      <ion-col size="8" style="text-align: center">
+        <p
+          style="
+            color: #03045e;
+            margin-top: 7px;
+            font-family: 'Poppins', sans-serif;
+          "
+        >
+          Post a Job
+        </p>
+      </ion-col>
+      <ion-col style="text-align: center" size="2"> </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="width: 90%; margin: 0 auto">
+    <div style="display: flex">
+      <hr class="activehr" />
+      <hr class="activehr" />
+      <hr class="activehr" />
+      <hr class="activehr" />
+      <hr class="simplehr" />
+    </div>
+  </div>
+  <div>
+    <p class="title1">Add Experience</p>
+
+    <p style="margin-top: 50px; margin-left: 20px">
+      Does this role required experience?
+    </p>
+
+    <div style="display: flex">
+      <div
+        (click)="optClick(opt)"
+        [class.divcheck]="selectedoptId == opt.id"
+        [class.divuncheck]="selectedoptId != opt.id"
+        *ngFor="let opt of optionArrAge"
+      >
+        <ion-label>{{opt.name}}</ion-label>
+        <img
+          *ngIf="selectedoptId == opt.id"
+          class="imgsize"
+          src="assets/imgs/checkwhite.svg"
+        />
+        <img
+          *ngIf="selectedoptId != opt.id"
+          class="imgsize"
+          src="assets/imgs/checkgray.svg"
+        />
+      </div>
+    </div>
+
+    <!-- 3 -->
+
+    <p style="margin-bottom: 0px; margin-left: 20px; margin-top: 30px">
+      Minimum experience required
+    </p>
+    <div style="margin-left: 20px">
+      <ion-label class="smalltitle"
+        >Set the slider to the minimal level of experience required for this
+        role.</ion-label
+      >
+    </div>
+
+    <div style="margin: 20px">
+      <ion-range min="0" max="100" color="secondary"> </ion-range>
+    </div>
+    <!-- ion range  -->
+
+    <div style="width: 90%; margin: 0px auto; margin-top: 20px">
+      <ion-button
+        style="
+          --background: #03045e;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 16px;
+          text-align: center;
+          color: #ffffff;
+          width: 100%;
+        "
+      >
+        Save & Next
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

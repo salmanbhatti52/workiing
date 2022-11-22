@@ -1,0 +1,45 @@
+.wrapper{
+  width: 85%;
+  margin: 8% auto;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+.text{
+  color: #03045E;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: 'Poppins', sans-serif;
+}
+.text2{
+
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 44px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #000000;
+}
+.para{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #6A6A6A;
+
+}
+.btndiv{
+  position: absolute;
+  bottom: 40px;
+  left: 48px;
+}
+.btn{
+
+  font-size: 16px;
+  font-weight: 400;
+  --background: #03045E;
+  --border-radius: 12px;
+  height: 54px;
+  width: 261px;
+}

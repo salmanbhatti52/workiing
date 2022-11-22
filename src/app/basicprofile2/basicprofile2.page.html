@@ -1,0 +1,60 @@
+<ion-header [translucent]="true" class="ion-no-border cheader">
+  <ion-toolbar class="headBgGlobal">
+    <ion-row class="center-icons">
+      <ion-col size="2" style="padding-left: 25px;">
+        <ion-buttons>
+          <div style="width:100%;">
+            <img src="/assets/imgs/backbtn.svg">
+          </div>
+        </ion-buttons>
+      </ion-col>
+      <ion-col size="7" style="text-align: center;">
+        <ion-label class="textcenter">Complete Profile</ion-label>
+      </ion-col>
+      <ion-col class="titleclass" size="3">
+
+        <img src="/assets/imgs/skiparrow.svg" style="margin-right:7%;">
+
+
+      </ion-col>
+
+    </ion-row>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <div class="wrapper">
+    <div class="text1">About me</div>
+    <div class="inputfield">
+      <img src="/assets/imgs/user.svg" style="margin: -66px 8px 10px 10px;width: 14px;
+      height: 21px;">
+      <ion-textarea rows="5" cols="5" placeholder="Write here"></ion-textarea>
+    </div>
+
+    <div class="text1">Your’s age</div>
+    <div style="margin-top:10px;">
+      <ion-chip (click)="optClickReply(opt)" [class.divcheck]="selectedoptIdReply == opt.id"
+        [class.divuncheck]="selectedoptIdReply != opt.id" *ngFor="let opt of optionArr">
+        <ion-label>{{opt.name}}</ion-label>
+        <img *ngIf="selectedoptIdReply == opt.id" class="imgsize" src="assets/imgs/checkwhite.svg" />
+        <img *ngIf="selectedoptIdReply != opt.id" class="imgsize" src="assets/imgs/checkgray.svg" />
+      </ion-chip>
+    </div>
+
+    <div class="text1">Looking for Job</div>
+    <div style="margin-top:10px;">
+      <ion-chip (click)="optjobReply(jobopt)" [class.divcheck]="selectedoptjob == jobopt.id"
+        [class.divuncheck]="selectedoptjob != jobopt.id" *ngFor="let jobopt of jobsArr">
+        <ion-label>{{jobopt.name}}</ion-label>
+        <img *ngIf="selectedoptjob == jobopt.id" class="imgsize" src="assets/imgs/checkwhite.svg" />
+        <img *ngIf="selectedoptjob != jobopt.id" class="imgsize" src="assets/imgs/checkgray.svg" />
+      </ion-chip>
+    </div>
+
+    <div style="margin-top: 5%;text-align: center;">
+      <ion-button class="c-btn">Save & Next<span style="margin-left: 5px;
+        margin-top: 5px;"><img src="assets/imgs/arrow-right.svg"></span></ion-button>
+    </div>
+  </div>
+</ion-content>

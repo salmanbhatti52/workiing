@@ -1,0 +1,28 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>otp</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="wrapper">
+    <div class="center-div">
+      <img src="/assets/imgs/working2.svg">
+      <div class="htext">Forgot password</div>
+
+      <p class="para">We have sent a 4-digit verification <br>
+        to your an email address.<br>
+        Please enter it below.</p>
+    </div>
+    <div class="timer">02:00</div>
+    <ion-row style="display: flex;
+    justify-content: center;margin-top: 5%;">
+      <ng-otp-input (onInputChange)="onOtpChange($event)" [config]="{length:4,allowNumbersOnly:true}"></ng-otp-input>
+    </ion-row>
+    <p class="para1">Resend Verification Code</p>
+    <div class="btndiv" (click)="next()">
+      <ion-button class="btn">Next</ion-button>
+    </div>
+  </div>
+
+</ion-content>

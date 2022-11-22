@@ -1,0 +1,46 @@
+.wrapper{
+  width: 90%;
+  margin: 2% auto;
+  font-family: 'Poppins', sans-serif;
+}
+.text{
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #5463FF;
+}
+.imgcls{
+  border-radius: 20px;
+  box-shadow: 0px 10px 35px -10px rgb(64 59 75 / 20%);
+  background: #FFFFFF;
+  padding: 8px 20px;
+}
+.text1{
+  font-size: 20px;
+  font-weight: 600;
+  color: #1A1D1E;
+
+}
+.activeproduct{
+  border: 1.5px solid #03045E;
+}
+.btndiv{
+  margin-top:10%;
+}
+.btn{
+  --background: #03045E;
+  height: 54px;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  --border-radius: 12px;
+}
+.ftext{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: center;
+  color: #6A6A6A;
+  margin-bottom: 5%;
+  font-family: 'Poppins', sans-serif;
+}

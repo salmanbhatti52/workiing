@@ -1,0 +1,58 @@
+<ion-header [translucent]="true" class="ion-no-border cheader">
+  <ion-toolbar class="headBgGlobal">
+    <ion-row class="center-icons">
+      <ion-col size="2" style="padding-left: 25px;">
+        <ion-buttons>
+          <div style="width:100%;">
+            <img src="/assets/imgs/backbtn.svg">
+          </div>
+        </ion-buttons>
+      </ion-col>
+      <ion-col size="8">
+        <img src="/assets/imgs/working2.svg" style="width: 121px;
+        height: 26px;">
+      </ion-col>
+      <ion-col style="text-align:center;" size="2">
+
+        <img src="/assets/imgs/user2.svg">
+
+
+      </ion-col>
+
+    </ion-row>
+
+  </ion-toolbar>
+  <div class="search-div">
+    <div style="width:85%;float:left;">
+      <ion-searchbar></ion-searchbar>
+    </div>
+    <div class="filterimg">
+      <img src="assets/imgs/location-dot.svg" style="width: 18px;
+      height: 21px;">
+    </div>
+    <div class="clear"></div>
+  </div>
+
+</ion-header>
+
+<ion-content>
+  <div style="height:100%">
+    <capacitor-google-map #map></capacitor-google-map>
+  </div>
+
+  <div class="footercls">
+    <div style="text-align: center;">
+      <ion-button class="btn1">Log In</ion-button>
+      <ion-button class="btn2">Sign up</ion-button>
+    </div>
+    <p class="para">Or Continue with</p>
+    <div style="display: flex;
+      justify-content: center;margin-top:5%;">
+      <img src="/assets/imgs/google.svg">
+      <img src="/assets/imgs/facebook.svg" style="margin-left: 6%;">
+    </div>
+  </div>
+</ion-content>
+<!-- <ion-footer class="ion-no-border" style="border-radius:30px;">
+
+</ion-footer> -->

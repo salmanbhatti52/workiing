@@ -1,0 +1,148 @@
+<ion-header [translucent]="true" class="ion-no-border cheader">
+  <ion-toolbar class="headBgGlobal">
+    <ion-row class="center-icons">
+      <ion-col size="2" style="padding-left: 25px;">
+        <ion-buttons>
+          <div style="width:100%;">
+            <img src="/assets/imgs/menu.svg">
+          </div>
+        </ion-buttons>
+      </ion-col>
+      <ion-col size="6">
+        <img src="/assets/imgs/working2.svg" style="width: 121px;
+        height: 26px;">
+      </ion-col>
+      <ion-col class="titleclass" size="4">
+        <div style="display:flex;">
+          <img src="/assets/imgs/location-dot.svg" style="margin-right:7%;">
+
+          <img src="/assets/imgs/bell.svg" style="position: relative;">
+
+          <ion-badge class="iconbadge">1</ion-badge>
+
+          <img src="/assets/imgs/userprofile.svg" style="width:44px;height: 44px;margin-left:13px;">
+
+
+        </div>
+
+      </ion-col>
+
+    </ion-row>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <div class="wrapper">
+    <div class="search-div">
+      <div style="width:85%;float:left;">
+        <ion-searchbar></ion-searchbar>
+      </div>
+      <div class="filterimg">
+        <img src="assets/imgs/filter.svg">
+      </div>
+      <div class="clear"></div>
+    </div>
+
+    <ion-row class="rowcls">
+      <ion-col size="3.5">
+        <img src="assets/imgs/ball.svg" style="position:relative;">
+        <img src="assets/imgs/star.svg" class="ps">
+      </ion-col>
+      <ion-col size="8.5">
+        <div class="htext">Improve Your Profile!</div>
+        <div class="ptext">Aliquam porta nisl dolor, molestie pellentesque elit molestie in. Morbi metus neque,
+          elementum ullamcorper
+          hendrerit eget, tincidunt..</div>
+      </ion-col>
+      <div class="btndiv">
+        <ion-button class="btn">Edit My Profile<span style="margin-left: 5px;
+          margin-top: 5px;"><img src="assets/imgs/arrow-right.svg"></span></ion-button>
+      </div>
+    </ion-row>
+
+    <div class="flex-c">
+      <div class="text1">Popular Job</div>
+      <div class="text2">Show All</div>
+    </div>
+
+    <ion-slides #slidesTime class="timeSlide" pager="false" [options]="slideOptsTime">
+      <ion-slide *ngFor="let job of jobslist">
+        <div class="main">
+          <div class="main-flex">
+            <img src="assets/imgs/google.svg">
+            <div style="margin-left: 2%;">
+              <div class="text3">{{job.name}}</div>
+              <div class="text4">{{job.nickname}}</div>
+            </div>
+            <img src="assets/imgs/heart.svg" style="height:15px;">
+          </div>
+          <div style="margin-top: 2%;
+          display: flex;
+          align-items: center;
+          margin-left: 3%;">
+            <img src="assets/imgs/location-dot.svg" style="width: 12px;
+            height: 14px;">
+            <div class="text4" style="margin-left:2%;">{{job.location}}</div>
+          </div>
+          <ion-badge slot="start" class="badge">{{job.storename}}</ion-badge>
+        </div>
+      </ion-slide>
+
+    </ion-slides>
+
+    <div class="flex-c">
+      <div class="text1">Recent Post</div>
+      <div class="text2">Show All</div>
+    </div>
+    <div class="main">
+      <div class="main-flex">
+        <img src="assets/imgs/facebook.svg">
+        <div style="margin-left: 2%;">
+          <div class="text3">Restaurant Team Member</div>
+          <div class="text4">Full Time</div>
+        </div>
+      </div>
+      <div style="display: flex;
+      align-items: center;">
+        <div style="margin-top: 2%;
+        display: flex;
+        align-items: center;
+        margin-left: 3%;width: 100%;">
+          <img src="assets/imgs/location-dot.svg" style="width: 12px;
+          height: 13px;">
+          <div class="text4" style="margin-left:2%;">Toronto, Canada</div>
+        </div>
+        <div>
+          <ion-badge slot="start" class="badge">Testaurant/Food Server</ion-badge>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</ion-content>
+<ion-footer class="ion-no-border">
+  <div class="tabsbar">
+    <div>
+      <img src="/assets/imgs/icons/suitcaseactive.svg">
+      <div class="tlbl">Find Job</div>
+    </div>
+    <div style="position: relative;">
+      <img src="/assets/imgs/icons/message-lines.svg">
+      <div class="tlbl">Messages</div>
+      <ion-badge class="tbadge">1</ion-badge>
+    </div>
+    <div>
+      <img src="/assets/imgs/icons/add.svg">
+    </div>
+    <div>
+      <img src="/assets/imgs/icons/bookmark.svg">
+      <div class="tlbl">Save Jobs</div>
+    </div>
+    <div>
+      <img src="/assets/imgs/icons/user.svg">
+      <div class="tlbl">Profile</div>
+    </div>
+  </div>
+</ion-footer>

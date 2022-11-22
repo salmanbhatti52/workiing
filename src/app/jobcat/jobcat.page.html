@@ -1,0 +1,67 @@
+<ion-header [translucent]="true" class="ion-no-border cheader">
+  <ion-toolbar class="headBgGlobal">
+    <ion-row class="center-icons">
+      <ion-col size="2">
+        <ion-buttons>
+          <div style="width: 100%">
+            <img src="/assets/imgs/menu.svg" />
+          </div>
+        </ion-buttons>
+      </ion-col>
+      <ion-col size="8" style="text-align: center">
+        <p
+          style="
+            color: #03045e;
+            margin-top: 7px;
+            font-family: 'Poppins', sans-serif;
+          "
+        >
+          Job Category
+        </p>
+      </ion-col>
+      <ion-col style="text-align: center" size="2"> </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <div style="margin: 25px 0px; display: flex; flex-wrap: wrap">
+      <div
+        (click)="optClickJobCat(opt)"
+        [class.divcheck]="selectedJobCatID == opt.id"
+        [class.divuncheck]="selectedJobCatID != opt.id"
+        *ngFor="let opt of jobCatArr"
+      >
+        <ion-label>{{opt.name}}</ion-label>
+        <img
+          *ngIf="selectedJobCatID == opt.id"
+          class="imgsize"
+          src="assets/imgs/checkwhite.svg"
+        />
+        <img
+          *ngIf="selectedJobCatID != opt.id"
+          class="imgsize"
+          src="assets/imgs/checkgray.svg"
+        />
+      </div>
+    </div>
+
+    <div style="width: 90%; margin: 0px auto 30px auto">
+      <ion-button
+        style="
+          --background: #03045e;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 16px;
+          text-align: center;
+          color: #ffffff;
+          width: 100%;
+        "
+      >
+        Save
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

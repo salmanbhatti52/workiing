@@ -1,0 +1,88 @@
+<ion-header [translucent]="true" class="ion-no-border cheader">
+  <ion-toolbar class="headBgGlobal">
+    <ion-row class="center-icons">
+      <ion-col size="2" style="padding-left: 25px;">
+        <ion-buttons>
+          <div style="width:100%;">
+            <img src="/assets/imgs/backbtn.svg">
+          </div>
+        </ion-buttons>
+      </ion-col>
+      <ion-col size="7" style="text-align: center;">
+        <ion-label class="textcenter">Complete Profile</ion-label>
+      </ion-col>
+      <ion-col class="titleclass" size="3">
+
+        <img src="/assets/imgs/skiparrow.svg" style="margin-right:7%;">
+
+
+      </ion-col>
+
+    </ion-row>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <div class="wrapper">
+    <div class="inputfield">
+      <ion-input class="input" type="text" placeholder="First Name"><img style="margin:15px 7px 14px 15px;"
+          src="/assets/imgs/user.svg"> </ion-input>
+    </div>
+    <div class="inputfield">
+      <ion-input class="input" type="text" placeholder="Last Name"><img style="margin:15px 7px 14px 15px;"
+          src="/assets/imgs/user.svg"> </ion-input>
+    </div>
+    <div class="inputfield">
+      <ion-input class="input" type="email" placeholder="Adoneshafi@gmail.com"><img style="margin:15px 7px 14px 15px;"
+          src="/assets/imgs/message.svg"> </ion-input>
+    </div>
+    <div class="inputfield">
+      <div style="display: flex;
+      align-items: center;">
+        <img style="margin:15px 7px 14px 15px;" src="/assets/imgs/phone.svg">
+        <img style="margin:15px 7px 14px 7px;width: 23px;
+        height: 23px;
+        border-radius: 90px;" src="{{flagimg}}" (click)="openfflaglist()">
+        <div class="code" (click)="openfflaglist()">{{countrycode}}
+        </div>
+        <div [class.angleup]="upicon==true" style="margin-left:2%;">
+          <img src="/assets/imgs/angle-down.svg" *ngIf="upicon==false">
+          <img src="/assets/imgs/angle-up.svg" *ngIf="upicon==true" style="width: 14px;
+          height: 21px;">
+        </div>
+        <ion-input class="input" type="tel" placeholder="123-698-7426">
+
+        </ion-input>
+      </div>
+
+    </div>
+
+    <!-- flag list shown -->
+    <div *ngIf="flaglist==true">
+      <ion-list style="height: 150px;
+      overflow: scroll;
+      width: 58px;
+      margin-left:27px;box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;">
+        <ion-item *ngFor="let item of items" (click)="viewDetails(item)">
+          <ion-avatar item-start>
+            <img src="{{item.flag}}" style="width: 30px;
+            height: 30px;">
+
+          </ion-avatar>
+        </ion-item>
+      </ion-list>
+    </div>
+    <!-- flag list shown -->
+
+    <div class="inputfield">
+      <ion-input class="input" type="text" placeholder="Tx-21,  Crocket, TX"><img style="margin:15px 7px 14px 15px;"
+          src="/assets/imgs/location-dot.svg"> </ion-input>
+    </div>
+    <div style="margin-top: 5%;text-align: center;">
+      <ion-button class="c-btn">Save & Next<span style="margin-left: 5px;
+        margin-top: 5px;"><img src="assets/imgs/arrow-right.svg"></span></ion-button>
+    </div>
+  </div>
+
+</ion-content>
