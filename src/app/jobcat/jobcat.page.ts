@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-jobcat',
@@ -24,7 +25,7 @@ export class JobcatPage implements OnInit {
     { id: 14, name: 'General Labor' },
     { id: 15, name: 'Other' },
   ];
-  constructor() {}
+  constructor(public router: Router) {}
 
   ngOnInit() {}
 
@@ -32,5 +33,9 @@ export class JobcatPage implements OnInit {
     console.log('optClick', opt);
     this.selectedJobCatID = opt.id;
     console.log(this.selectedJobCatID);
+  }
+
+  next() {
+    this.router.navigate(['job8']);
   }
 }

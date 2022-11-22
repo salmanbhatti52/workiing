@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,70 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./job12.page.scss'],
 })
 export class Job12Page implements OnInit {
+  arraytest = [
+    {
+      id: 1,
+      image: 'assets/imgs/joblogo.svg',
+      name: 'Ali Syed',
+      arealocation: 'Multan',
+      experence: '5 years',
+      workplace: 'Akodes IT',
+    },
+    {
+      id: 1,
+      image: 'assets/imgs/joblogo.svg',
+      name: 'Ali Syed',
+      arealocation: 'Multan',
+      experence: '5 years',
+      workplace: 'Akodes IT',
+    },
+    {
+      id: 1,
+      image: 'assets/imgs/joblogo.svg',
+      name: 'Ali Syed',
+      arealocation: 'Multan',
+      experence: '5 years',
+      workplace: 'Akodes IT',
+    },
+    {
+      id: 1,
+      image: 'assets/imgs/joblogo.svg',
+      name: 'Ali Syed',
+      arealocation: 'Multan',
+      experence: '5 years',
+      workplace: 'Akodes IT',
+    },
+    {
+      id: 1,
+      image: 'assets/imgs/joblogo.svg',
+      name: 'Ali Syed',
+      arealocation: 'Multan',
+      experence: '5 years',
+      workplace: 'Akodes IT',
+    },
+    {
+      id: 1,
+      image: 'assets/imgs/joblogo.svg',
+      name: 'Ali Syed',
+      arealocation: 'Multan',
+      experence: '5 years',
+      workplace: 'Akodes IT',
+    },
+    {
+      id: 1,
+      image: 'assets/imgs/joblogo.svg',
+      name: 'Ali Syed',
+      arealocation: 'Multan',
+      experence: '5 years',
+      workplace: 'Akodes IT',
+    },
+  ];
 
-  constructor() { }
+  constructor(public location: Location) {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  goBack() {
+    this.location.back();
   }
-
 }

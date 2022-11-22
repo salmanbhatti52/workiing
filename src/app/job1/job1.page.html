@@ -29,20 +29,17 @@
       <ion-col size="0.3"></ion-col>
       <ion-col size="2">
         <ion-buttons>
-          <div style="width:100%;">
-            <img src="/assets/imgs/menu.svg">
+          <div style="width: 100%">
+            <img src="/assets/imgs/menu.svg" />
           </div>
         </ion-buttons>
       </ion-col>
-      <ion-col size="7.5" style="text-align: center;">
+      <ion-col size="7.5" style="text-align: center">
         <ion-label class="textcenter">Post a Job</ion-label>
       </ion-col>
-      <ion-col class="titleclass" size="2">
-      </ion-col>
-
+      <ion-col class="titleclass" size="2"> </ion-col>
     </ion-row>
   </ion-toolbar>
-
 </ion-header>
 
 <ion-content>
@@ -65,47 +62,62 @@
     </ion-row>
 
     <div class="inputfield">
-      <ion-input class="input" type="email" placeholder="Compny Name"><img style="margin: 15px 7px 14px 15px"
-          src="/assets/imgs/buildings.svg" />
+      <ion-input class="input" type="email" placeholder="Compny Name"
+        ><img
+          style="margin: 15px 7px 14px 15px"
+          src="/assets/imgs/buildings.svg"
+        />
       </ion-input>
     </div>
     <div class="inputfield">
-      <ion-input class="input" type="email" placeholder="Compny Website"><img style="margin: 15px 7px 14px 15px"
-          src="/assets/imgs/browser.svg" />
+      <ion-input class="input" type="email" placeholder="Compny Website"
+        ><img
+          style="margin: 15px 7px 14px 15px"
+          src="/assets/imgs/browser.svg"
+        />
       </ion-input>
     </div>
 
     <div class="inputfield">
-      <div style="display: flex;
-      align-items: center;">
-        <img style="margin:15px 7px 14px 15px;" src="/assets/imgs/phone.svg">
-        <img style="margin:15px 7px 14px 7px;width: 23px;
-        height: 23px;
-        border-radius: 90px;" src="{{flagimg}}" (click)="openfflaglist()">
-        <div class="code" (click)="openfflaglist()">{{countrycode}}
-        </div>
-        <div [class.angleup]="upicon==true" style="margin-left:2%;">
-          <img src="/assets/imgs/angle-down.svg" *ngIf="upicon==false">
-          <img src="/assets/imgs/angle-up.svg" *ngIf="upicon==true" style="width: 14px;
-          height: 21px;">
+      <div style="display: flex; align-items: center">
+        <img style="margin: 15px 7px 14px 15px" src="/assets/imgs/phone.svg" />
+        <img
+          style="
+            margin: 15px 7px 14px 7px;
+            width: 23px;
+            height: 23px;
+            border-radius: 90px;
+          "
+          src="{{flagimg}}"
+          (click)="openfflaglist()"
+        />
+        <div class="code" (click)="openfflaglist()">{{countrycode}}</div>
+        <div [class.angleup]="upicon==true" style="margin-left: 2%">
+          <img src="/assets/imgs/angle-down.svg" *ngIf="upicon==false" />
+          <img
+            src="/assets/imgs/angle-up.svg"
+            *ngIf="upicon==true"
+            style="width: 14px; height: 21px"
+          />
         </div>
         <ion-input class="input" type="tel" placeholder="Phone Number">
-
         </ion-input>
       </div>
-
     </div>
     <!-- flag list shown -->
     <div *ngIf="flaglist==true">
-      <ion-list style="height: 150px;
-      overflow: scroll;
-      width: 58px;
-      margin-left:27px;box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;">
+      <ion-list
+        style="
+          height: 150px;
+          overflow: scroll;
+          width: 58px;
+          margin-left: 27px;
+          box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+        "
+      >
         <ion-item *ngFor="let item of items" (click)="viewDetails(item)">
           <ion-avatar item-start>
-            <img src="{{item.flag}}" style="width: 30px;
-            height: 30px;">
-
+            <img src="{{item.flag}}" style="width: 30px; height: 30px" />
           </ion-avatar>
         </ion-item>
       </ion-list>
@@ -113,7 +125,9 @@
     <!-- flag list shown -->
 
     <div style="margin-top: 20px">
-      <ion-button style="
+      <ion-button
+        (click)="next()"
+        style="
           --background: #03045e;
           font-style: normal;
           font-weight: 500;
@@ -125,7 +139,8 @@
           height: 54px;
           --border-radius: 12px;
           text-transform: capitalize;
-        ">
+        "
+      >
         Save & Next
       </ion-button>
     </div>
@@ -134,23 +149,23 @@
 <ion-footer class="ion-no-border">
   <div class="tabsbar">
     <div>
-      <img src="/assets/imgs/icons/suitcase.svg">
+      <img src="/assets/imgs/icons/suitcase.svg" />
       <div class="tlbl">Find Job</div>
     </div>
-    <div style="position: relative;">
-      <img src="/assets/imgs/icons/message-lines.svg">
+    <div style="position: relative">
+      <img src="/assets/imgs/icons/message-lines.svg" />
       <div class="tlbl">Messages</div>
       <ion-badge class="tbadge">1</ion-badge>
     </div>
     <div>
-      <img src="/assets/imgs/icons/addactive.svg">
+      <img src="/assets/imgs/icons/addactive.svg" />
     </div>
     <div>
-      <img src="/assets/imgs/icons/bookmark.svg">
+      <img src="/assets/imgs/icons/bookmark.svg" />
       <div class="tlbl">Save Jobs</div>
     </div>
     <div>
-      <img src="/assets/imgs/icons/user.svg">
+      <img src="/assets/imgs/icons/user.svg" />
       <div class="tlbl">Profile</div>
     </div>
   </div>

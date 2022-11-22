@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { Job4Page } from '../job4/job4.page';
 @Component({
@@ -8,13 +9,12 @@ import { Job4Page } from '../job4/job4.page';
 })
 export class Job2Page implements OnInit {
   otp: any;
-  constructor(public modal: ModalController) { }
+  constructor(public modal: ModalController, public router: Router) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onOtpChange(event: any) {
-    console.log(event, "eventevent");
+    console.log(event, 'eventevent');
     this.otp = event;
   }
 
@@ -25,5 +25,9 @@ export class Job2Page implements OnInit {
     });
 
     return await modal.present();
+  }
+
+  next() {
+    this.router.navigate(['job5']);
   }
 }

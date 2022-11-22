@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-job1',
   templateUrl: './job1.page.html',
@@ -15,7 +16,7 @@ export class Job1Page implements OnInit {
   upicon = false;
   flaglist = false;
   showflags = true;
-  constructor(public http: HttpClient) { }
+  constructor(public http: HttpClient, public router: Router) {}
 
   ngOnInit() {
     this.setItems();
@@ -30,28 +31,26 @@ export class Job1Page implements OnInit {
       this.flaglist = false;
     }
 
-
     // this.setItems();
   }
   setItems() {
-    this.http.get('assets/countries.json').subscribe(
-      (res: any) => {
-        this.allItems = res.countries;
-        this.items = this.allItems;
-        console.log('items', this.items);
-
-      }
-    );
+    this.http.get('assets/countries.json').subscribe((res: any) => {
+      this.allItems = res.countries;
+      this.items = this.allItems;
+      console.log('items', this.items);
+    });
   }
 
   viewDetails(item: any) {
-    console.log('item===', item)
-    this.flaglist = false
-    this.flagimg = item.flag
+    console.log('item===', item);
+    this.flaglist = false;
+    this.flagimg = item.flag;
     this.upicon = false;
     this.countrycode = '+' + item.callingCodes[0];
-    console.log('code===', this.countrycode)
+    console.log('code===', this.countrycode);
   }
 
-
+  next() {
+    this.router.navigate(['job2']);
+  }
 }
