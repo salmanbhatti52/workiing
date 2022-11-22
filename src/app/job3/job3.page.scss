@@ -97,3 +97,31 @@ p{
   line-height: 18px;
   color: #3C3744;
 }
+
+//////////////////
+.tabsbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  background: #FFFFFF;
+  box-shadow: 0px -10px 35px -15px rgb(64 59 75 / 15%);
+  border-radius: 30px 30px 0px 0px;
+  padding: 6px 0px;
+}
+.tlbl{
+  font-size:11px;
+  margin-top: 6px;
+  margin-bottom: 2px;
+  font-weight:400;
+}
+.tbadge{
+  min-width: 20px;
+  font-size: 12px;
+  left: calc(50% + 3px);
+  top: calc(0% + -5px);
+  background: #5463FF;
+  min-height: 20px;
+  border-radius: 90px;
+  position: absolute;
+}

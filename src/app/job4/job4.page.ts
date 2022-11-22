@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-job4',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Job4Page implements OnInit {
 
-  constructor() { }
+  constructor(public modal: ModalController) { }
 
   ngOnInit() {
+  }
+  dismiss() {
+    this.modal.dismiss().then(data => {
+      // this.navCtrl.navigateForward('otp');
+    })
   }
 
 }

@@ -119,6 +119,14 @@ const routes: Routes = [
     path: 'job12',
     loadChildren: () => import('./job12/job12.module').then(m => m.Job12PageModule)
   },
+  {
+    path: 'basicprofile3',
+    loadChildren: () => import('./basicprofile3/basicprofile3.module').then( m => m.Basicprofile3PageModule)
+  },
+  {
+    path: 'addexperience',
+    loadChildren: () => import('./addexperience/addexperience.module').then( m => m.AddexperiencePageModule)
+  },
 ];
 
 @NgModule({

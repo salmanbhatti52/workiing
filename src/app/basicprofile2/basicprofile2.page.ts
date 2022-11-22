@@ -13,8 +13,13 @@ export class Basicprofile2Page implements OnInit {
   jobsArr = [{ id: 1, name: 'Full Time' },
   { id: 2, name: 'Part Time' },
   { id: 3, name: 'Both' }]
+  activesearches = [
+    { id: 1, name: 'Yes' },
+    { id: 2, name: 'No' },
+  ];
   selectedoptIdReply = 0;
   selectedoptjob = 0;
+  empsearch = 0;
   constructor() { }
 
   ngOnInit() {
@@ -27,6 +32,9 @@ export class Basicprofile2Page implements OnInit {
 
   optjobReply(opt: any) {
     this.selectedoptjob = opt.id;
+  }
+  searchesjobReply(opt: any) {
+    this.empsearch = opt.id;
   }
 
 }

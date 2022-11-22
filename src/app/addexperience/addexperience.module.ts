@@ -4,18 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { Job2PageRoutingModule } from './job2-routing.module';
+import { AddexperiencePageRoutingModule } from './addexperience-routing.module';
 
-import { Job2Page } from './job2.page';
-import { NgOtpInputModule } from 'ng-otp-input';
+import { AddexperiencePage } from './addexperience.page';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    Job2PageRoutingModule,
-    NgOtpInputModule
+    AddexperiencePageRoutingModule
   ],
-  declarations: [Job2Page]
+  declarations: [AddexperiencePage]
 })
-export class Job2PageModule { }
+export class AddexperiencePageModule {}

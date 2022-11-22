@@ -1,9 +1,19 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>job4</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
-
+  <div class="wrapper">
+    <div style="text-align: center;">
+      <img src="/assets/imgs/otp-security1.svg" style="margin-top: 5%;">
+      <div class="c-text">Congratulation</div>
+      <div class="c-para">You have successfully <br> verified your number</div>
+    </div>
+    <div style="margin-top: 5%;" (click)="dismiss()">
+      <ion-button class="c-btn">Okay<span style="margin-left: 5px;
+        margin-top: 5px;"><img src="assets/imgs/arrow-right.svg"></span></ion-button>
+    </div>
+  </div>
 </ion-content>
