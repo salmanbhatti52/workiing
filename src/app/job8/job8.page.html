@@ -4,20 +4,17 @@
       <ion-col size="0.3"></ion-col>
       <ion-col size="2">
         <ion-buttons>
-          <div style="width:100%;">
-            <img src="/assets/imgs/menu.svg">
+          <div style="width: 100%">
+            <img src="/assets/imgs/menu.svg" />
           </div>
         </ion-buttons>
       </ion-col>
-      <ion-col size="7.5" style="text-align: center;">
+      <ion-col size="7.5" style="text-align: center">
         <ion-label class="textcenter">Post a Job</ion-label>
       </ion-col>
-      <ion-col class="titleclass" size="2">
-      </ion-col>
-
+      <ion-col class="titleclass" size="2"> </ion-col>
     </ion-row>
   </ion-toolbar>
-
 </ion-header>
 
 <ion-content>
@@ -38,11 +35,23 @@
     </p>
 
     <div style="display: flex">
-      <div (click)="optClick(opt)" [class.divcheck]="selectedoptId == opt.id"
-        [class.divuncheck]="selectedoptId != opt.id" *ngFor="let opt of optionArrAge">
+      <div
+        (click)="optClick(opt)"
+        [class.divcheck]="selectedoptId == opt.id"
+        [class.divuncheck]="selectedoptId != opt.id"
+        *ngFor="let opt of optionArrAge"
+      >
         <ion-label>{{opt.name}}</ion-label>
-        <img *ngIf="selectedoptId == opt.id" class="imgsize" src="assets/imgs/checkwhite.svg" />
-        <img *ngIf="selectedoptId != opt.id" class="imgsize" src="assets/imgs/checkgray.svg" />
+        <img
+          *ngIf="selectedoptId == opt.id"
+          class="imgsize"
+          src="assets/imgs/checkwhite.svg"
+        />
+        <img
+          *ngIf="selectedoptId != opt.id"
+          class="imgsize"
+          src="assets/imgs/checkgray.svg"
+        />
       </div>
     </div>
 
@@ -52,8 +61,10 @@
       Minimum experience required
     </p>
     <div style="margin-left: 20px">
-      <ion-label class="smalltitle">Set the slider to the minimal level of experience required for this
-        role.</ion-label>
+      <ion-label class="smalltitle"
+        >Set the slider to the minimal level of experience required for this
+        role.</ion-label
+      >
     </div>
 
     <div style="margin: 20px">
@@ -62,19 +73,22 @@
     <!-- ion range  -->
 
     <div style="width: 90%; margin: 0px auto; margin-top: 20px">
-      <ion-button style="
-      --background: #03045e;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 16px;
-      text-align: center;
-      color: #ffffff;
-      width: 100%;
-      height: 54px;
-      --border-radius: 12px;
-      text-transform: capitalize;
-    ">
+      <ion-button
+        (click)="next()"
+        style="
+          --background: #03045e;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 16px;
+          text-align: center;
+          color: #ffffff;
+          width: 100%;
+          height: 54px;
+          --border-radius: 12px;
+          text-transform: capitalize;
+        "
+      >
         Save & Next
       </ion-button>
     </div>
@@ -84,23 +98,23 @@
 <ion-footer class="ion-no-border">
   <div class="tabsbar">
     <div>
-      <img src="/assets/imgs/icons/suitcase.svg">
+      <img src="/assets/imgs/icons/suitcase.svg" />
       <div class="tlbl">Find Job</div>
     </div>
-    <div style="position: relative;">
-      <img src="/assets/imgs/icons/message-lines.svg">
+    <div style="position: relative">
+      <img src="/assets/imgs/icons/message-lines.svg" />
       <div class="tlbl">Messages</div>
       <ion-badge class="tbadge">1</ion-badge>
     </div>
     <div>
-      <img src="/assets/imgs/icons/addactive.svg">
+      <img src="/assets/imgs/icons/addactive.svg" />
     </div>
     <div>
-      <img src="/assets/imgs/icons/bookmark.svg">
+      <img src="/assets/imgs/icons/bookmark.svg" />
       <div class="tlbl">Save Jobs</div>
     </div>
     <div>
-      <img src="/assets/imgs/icons/user.svg">
+      <img src="/assets/imgs/icons/user.svg" />
       <div class="tlbl">Profile</div>
     </div>
   </div>

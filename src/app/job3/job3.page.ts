@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-job3',
@@ -25,7 +26,7 @@ export class Job3Page implements OnInit {
   selectedoptIdAge = 0;
   selectedoptIdReply = 0;
 
-  constructor() {}
+  constructor(public router: Router) {}
 
   ngOnInit() {}
 
@@ -44,5 +45,9 @@ export class Job3Page implements OnInit {
   optClickReply(opt: any) {
     console.log('optClickReply', opt);
     this.selectedoptIdReply = opt.id;
+  }
+
+  next() {
+    this.router.navigate(['jobcat']);
   }
 }

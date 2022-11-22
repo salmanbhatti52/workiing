@@ -4,27 +4,24 @@
       <ion-col size="0.3"></ion-col>
       <ion-col size="2">
         <ion-buttons>
-          <div style="width:100%;">
-            <img src="/assets/imgs/menu.svg">
+          <div style="width: 100%">
+            <img src="/assets/imgs/menu.svg" />
           </div>
         </ion-buttons>
       </ion-col>
-      <ion-col size="7.5" style="text-align: center;">
+      <ion-col size="7.5" style="text-align: center">
         <ion-label class="textcenter">Post a Job</ion-label>
       </ion-col>
-      <ion-col class="titleclass" size="2">
-      </ion-col>
-
+      <ion-col class="titleclass" size="2"> </ion-col>
     </ion-row>
   </ion-toolbar>
-
 </ion-header>
 
 <ion-content>
   <div style="width: 90%; margin: 0 auto">
     <div style="display: flex">
       <hr class="activehr" />
-      <hr class="simplehr" />
+      <hr class="activehr" />
       <hr class="simplehr" />
       <hr class="simplehr" />
       <hr class="simplehr" />
@@ -37,14 +34,18 @@
     </p>
 
     <div class="timer">02:00</div>
-    <ion-row style="display: flex;
-    justify-content: center;margin-top: 5%;">
-      <ng-otp-input (onInputChange)="onOtpChange($event)" [config]="{length:4,allowNumbersOnly:true}"></ng-otp-input>
+    <ion-row style="display: flex; justify-content: center; margin-top: 5%">
+      <ng-otp-input
+        (onInputChange)="onOtpChange($event)"
+        [config]="{length:4,allowNumbersOnly:true}"
+      ></ng-otp-input>
     </ion-row>
 
     <div style="margin-top: 20px">
-      <ion-button style="
-         --background: #03045e;
+      <ion-button
+        (click)="next()"
+        style="
+          --background: #03045e;
           font-style: normal;
           font-weight: 500;
           font-size: 16px;
@@ -55,7 +56,9 @@
           height: 54px;
           --border-radius: 12px;
           text-transform: capitalize;
-        " (click)="popup()">
+        "
+        (click)="popup()"
+      >
         Next
       </ion-button>
     </div>
