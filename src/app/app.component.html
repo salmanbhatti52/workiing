@@ -2,25 +2,62 @@
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
-        <ion-list id="inbox-list">
-          <ion-list-header>Inbox</ion-list-header>
-          <ion-note>hi@ionicframework.com</ion-note>
+        <div style="margin-right: 6%; text-align: right">
+          <ion-menu-toggle
+            ><img src="assets/menuicons/menucross.svg"
+          /></ion-menu-toggle>
+        </div>
 
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
-              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
-              <ion-label>{{ p.title }}</ion-label>
+        <ion-list style="width: 78%; margin: 0px auto" id="inbox-list">
+          <ion-row style="margin-bottom: 25px">
+            <ion-col style="text-align: center">
+              <img
+                style="width: 80px; height: 80px; border-radius: 50%"
+                src="assets/imgs/joblogo.svg"
+              />
+              <p
+                style="
+                  font-family: 'Poppins', sans-serif;
+                  font-style: normal;
+                  font-weight: 500;
+                  font-size: 30px;
+                  line-height: 30px;
+                  color: #1a1d1e;
+                "
+              >
+                Adom Shafi
+              </p>
+              <p
+                style="
+                  font-family: 'Poppins', sans-serif;
+                  font-style: normal;
+                  font-weight: 400;
+                  font-size: 14px;
+                  line-height: 14px;
+                  color: #6a6a6a;
+                "
+              >
+                hellobesnik@gmail.com
+              </p>
+            </ion-col>
+          </ion-row>
+          <ion-menu-toggle
+            auto-hide="false"
+            *ngFor="let p of appPages; let i = index"
+          >
+            <ion-item
+              [class.topmarginclass]="p.title == 'Logout'"
+              routerDirection="root"
+              [routerLink]="[p.url]"
+              lines="none"
+              detail="false"
+              routerLinkActive="selected"
+            >
+              <img src="assets/menuicons/{{ p.icon }}" />
+
+              <ion-label class="labelclass">{{ p.title }}</ion-label>
             </ion-item>
           </ion-menu-toggle>
-        </ion-list>
-
-        <ion-list id="labels-list">
-          <ion-list-header>Labels</ion-list-header>
-
-          <ion-item *ngFor="let label of labels" lines="none">
-            <ion-icon slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
-            <ion-label>{{ label }}</ion-label>
-          </ion-item>
         </ion-list>
       </ion-content>
     </ion-menu>

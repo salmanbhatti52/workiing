@@ -159,6 +159,54 @@ const routes: Routes = [
     path: 'profile-preview',
     loadChildren: () => import('./profile-preview/profile-preview.module').then( m => m.ProfilePreviewPageModule)
   },
+  {
+    path: 'accountsetting',
+    loadChildren: () => import('./accountsetting/accountsetting.module').then( m => m.AccountsettingPageModule)
+  },
+  {
+    path: 'faq',
+    loadChildren: () => import('./faq/faq.module').then( m => m.FaqPageModule)
+  },
+  {
+    path: 'privacypolicy',
+    loadChildren: () => import('./privacypolicy/privacypolicy.module').then( m => m.PrivacypolicyPageModule)
+  },
+  {
+    path: 'terms',
+    loadChildren: () => import('./terms/terms.module').then( m => m.TermsPageModule)
+  },
+  {
+    path: 'invitefriend',
+    loadChildren: () => import('./invitefriend/invitefriend.module').then( m => m.InvitefriendPageModule)
+  },
+  {
+    path: 'review',
+    loadChildren: () => import('./review/review.module').then( m => m.ReviewPageModule)
+  },
+  {
+    path: 'review2',
+    loadChildren: () => import('./review2/review2.module').then( m => m.Review2PageModule)
+  },
+  {
+    path: 'mypostedjob2',
+    loadChildren: () => import('./mypostedjob2/mypostedjob2.module').then( m => m.Mypostedjob2PageModule)
+  },
+  {
+    path: 'mypostedjob1',
+    loadChildren: () => import('./mypostedjob1/mypostedjob1.module').then( m => m.Mypostedjob1PageModule)
+  },
+  {
+    path: 'myjobpedning',
+    loadChildren: () => import('./myjobpedning/myjobpedning.module').then( m => m.MyjobpedningPageModule)
+  },
+  {
+    path: 'myjobshortlist',
+    loadChildren: () => import('./myjobshortlist/myjobshortlist.module').then( m => m.MyjobshortlistPageModule)
+  },
+  {
+    path: 'myjobinterview',
+    loadChildren: () => import('./myjobinterview/myjobinterview.module').then( m => m.MyjobinterviewPageModule)
+  },
 ];
 
 @NgModule({

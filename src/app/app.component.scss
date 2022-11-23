@@ -22,9 +22,6 @@ ion-menu.md ion-note {
   padding-left: 10px;
 }
 
-ion-menu.md ion-list#inbox-list {
-  border-bottom: 1px solid var(--ion-color-step-150, #d7d8da);
-}
 
 ion-menu.md ion-list#inbox-list ion-list-header {
   font-size: 22px;
@@ -116,4 +113,26 @@ ion-note {
 
 ion-item.selected {
   --color: var(--ion-color-primary);
+}
+
+p {
+  display: block;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.labelclass{
+  margin-left: 13px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400 !important;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1A1D1E;
+}
+
+.topmarginclass{
+  margin-top: 35px;
 }

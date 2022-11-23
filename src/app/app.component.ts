@@ -6,13 +6,23 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Inbox', url: '/folder/Inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/Outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/Favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/Archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/Trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
+    { title: 'My Posted Jobs', url: '/mypostedjob1', icon: 'menujob.svg' },
+    {
+      title: 'Account Settings',
+      url: '/accountsetting',
+      icon: 'menuaccount.svg',
+    },
+    { title: 'Invite', url: '/invitefriend', icon: 'menuinvite.svg' },
+    { title: 'Review App', url: '/review', icon: 'menureview.svg' },
+    {
+      title: 'Contact Workiing',
+      url: '/folder/Trash',
+      icon: 'menucontact.svg',
+    },
+    { title: 'Terms & Conditions', url: '/terms', icon: 'menuterms.svg' },
+    { title: 'Privacy Policy', url: '/privacypolicy', icon: 'menuprivacy.svg' },
+    { title: 'FAQ’s', url: '/faq', icon: 'menufaq.svg' },
+    { title: 'Logout', url: '/folder/Spam', icon: 'menulogout.svg' },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() {}
 }

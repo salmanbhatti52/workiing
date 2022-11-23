@@ -1,0 +1,70 @@
+<ion-header [translucent]="true" class="ion-no-border cheader">
+  <ion-toolbar class="headBgGlobal">
+    <ion-row class="center-icons">
+      <ion-col size="0.3"></ion-col>
+      <ion-col size="2">
+        <ion-menu-toggle>
+          <ion-buttons>
+            <div style="width: 100%">
+              <img src="/assets/imgs/backbtn.svg" />
+            </div>
+          </ion-buttons>
+        </ion-menu-toggle>
+      </ion-col>
+      <ion-col size="7.5">
+        <ion-label class="textleft">My Posted Jobs</ion-label>
+      </ion-col>
+      <ion-col style="text-align: end" size="2"> </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div
+    style="
+      background: #ffffff;
+      border: 1px solid #ededed;
+      box-shadow: 0px 0px 35px -10px rgb(0 0 0 / 10%);
+      border-radius: 12px;
+      margin: 10px 10px 0px 10px;
+      padding: 10px;
+    "
+  >
+    <div style="display: flex; align-items: center">
+      <img
+        style="margin-right: 20px; height: 70px; width: 70px"
+        src="assets/imgs/joblogo.svg"
+      />
+      <div>
+        <p style="font-family: 'Poppins', sans-serif; font-weight: 600">
+          Pizza Hut
+        </p>
+        <p
+          style="
+            color: gray;
+            margin-top: 7px;
+            font-family: 'Poppins', sans-serif;
+          "
+        >
+          Toronto, Canada
+        </p>
+      </div>
+    </div>
+    <div style="margin-top: 10px">
+      <ion-badge class="badgeclass">Full Time</ion-badge>
+      <ion-badge class="badgeclass">Host & Server</ion-badge>
+      <ion-badge class="badgeclass">18+</ion-badge>
+
+      <ion-badge class="badgeSeemore" (click)="goToMyPostedJob2()"
+        >See details</ion-badge
+      >
+    </div>
+
+    <div style="display: flex; margin-top: 10px; margin-left: 10px">
+      <img src="assets/imgs/pinblack.svg" />
+      <p style="margin-left: 10px" class="subtitle1">
+        491 Mam St, Rowley, MA 01969 US
+      </p>
+    </div>
+  </div>
+</ion-content>

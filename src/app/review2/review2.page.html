@@ -1,0 +1,83 @@
+<ion-header [translucent]="true" class="ion-no-border cheader">
+  <ion-toolbar class="headBgGlobal">
+    <ion-row class="center-icons">
+      <ion-col size="0.3"></ion-col>
+      <ion-col size="2">
+        <ion-menu-toggle>
+          <ion-buttons>
+            <div style="width: 100%">
+              <img src="/assets/imgs/backbtn.svg" />
+            </div>
+          </ion-buttons>
+        </ion-menu-toggle>
+      </ion-col>
+      <ion-col size="7.5">
+        <ion-label class="textleft">Review App</ion-label>
+      </ion-col>
+      <ion-col style="text-align: end" size="2"> </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="margin: 30px auto 0px auto; width: 100%; text-align: left">
+    <img src="/assets/imgs/working2.svg" style="height: 40px; width: 185px" />
+  </div>
+
+  <div style="width: 90%; margin: 0% auto">
+    <p class="smalltitle">
+      Please let us know if youi have any qeuestions or concerns, and we will
+      reply back within the few hours!
+    </p>
+    <div style="display: flex; margin-top: 10px">
+      <p style="margin-left: 10px">Write here</p>
+    </div>
+    <div
+      style="
+        background: #fff;
+        box-shadow: 0px 10px 35px -10px rgb(64 59 75 / 20%);
+        border-radius: 12px;
+        padding: 10px;
+      "
+    >
+      <div style="display: flex; margin-top: 10px">
+        <img src="assets/imgs/pen.svg" />
+        <p style="margin: 0px 0px 0px 10px">Write your feedback here</p>
+      </div>
+      <ion-textarea class="input" rows="5" placeholder=""></ion-textarea>
+
+      <div>
+        <p style="text-align: right; margin: 0px" class="smalltitle">0/1000</p>
+      </div>
+    </div>
+
+    <p style="margin-bottom: 0px; margin-left: 0px; margin-top: 20px">
+      Maximum 5 images
+    </p>
+
+    <div style="display: flex; flex-wrap: wrap">
+      <div class="addimgdiv">
+        <img class="addimgcls" src="assets/imgs/pluscircle.svg" />
+      </div>
+
+      <div class="addimgdiv">
+        <img class="addimgcls" src="assets/imgs/pluscircle.svg" />
+      </div>
+
+      <div class="addimgdiv">
+        <img class="addimgcls" src="assets/imgs/pluscircle.svg" />
+      </div>
+
+      <div class="addimgdiv">
+        <img class="addimgcls" src="assets/imgs/pluscircle.svg" />
+      </div>
+
+      <div class="addimgdiv">
+        <img class="addimgcls" src="assets/imgs/pluscircle.svg" />
+      </div>
+    </div>
+    <div style="margin-top: 20px; margin-bottom: 20px; text-align: center">
+      <ion-button class="btn1">Submit</ion-button>
+    </div>
+  </div>
+</ion-content>
