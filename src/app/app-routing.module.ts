@@ -226,6 +226,18 @@ const routes: Routes = [
     path: 'editprofile',
     loadChildren: () => import('./editprofile/editprofile.module').then( m => m.EditprofilePageModule)
   },
+  {
+    path: 'updatepassword',
+    loadChildren: () => import('./updatepassword/updatepassword.module').then( m => m.UpdatepasswordPageModule)
+  },
+  {
+    path: 'notificationsettings',
+    loadChildren: () => import('./notificationsettings/notificationsettings.module').then( m => m.NotificationsettingsPageModule)
+  },
+  {
+    path: 'deleteaccount',
+    loadChildren: () => import('./deleteaccount/deleteaccount.module').then( m => m.DeleteaccountPageModule)
+  },
 
 ];
 

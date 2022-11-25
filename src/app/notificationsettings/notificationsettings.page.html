@@ -1,0 +1,65 @@
+<ion-header [translucent]="true" class="ion-no-border cheader">
+  <ion-toolbar class="headBgGlobal">
+    <ion-row class="center-icons">
+      <ion-col size="0.3"></ion-col>
+      <ion-col size="2">
+        <ion-menu-toggle>
+          <ion-buttons>
+            <div style="width: 100%">
+              <img src="/assets/imgs/backbtn.svg" />
+            </div>
+          </ion-buttons>
+        </ion-menu-toggle>
+      </ion-col>
+      <ion-col size="7.5">
+        <ion-label class="textleft">Notifications setting</ion-label>
+      </ion-col>
+      <ion-col style="text-align: end" size="2"> </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="width: 90%;
+  margin: 5% auto;  font-family: 'Poppins', sans-serif;">
+    <ion-row class="rowcls">
+      <ion-col size="9">
+        <div style="color: #000; font-size:16px;">New Posts</div>
+        <div style="color: #6A6A6A;; font-size: 10px;">If any new post update</div>
+      </ion-col>
+      <ion-col size="3">
+        <ion-toggle class="toogleclass" (ionChange)="toogle($event)"></ion-toggle>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="rowcls">
+      <ion-col size="9">
+        <div style="color: #000; font-size:16px;">Got Hired</div>
+        <div style="color: #6A6A6A;; font-size: 10px;">If you get hired any company</div>
+      </ion-col>
+      <ion-col size="3">
+        <ion-toggle class="toogleclass" (ionChange)="toogle($event)"></ion-toggle>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="rowcls">
+      <ion-col size="9">
+        <div style="color: #000; font-size:16px;">Get Rejected</div>
+        <div style="color: #6A6A6A;; font-size: 10px;">If you rejected by any company</div>
+      </ion-col>
+      <ion-col size="3">
+        <ion-toggle class="toogleclass" (ionChange)="toogle($event)"></ion-toggle>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="rowcls">
+      <ion-col size="9">
+        <div style="color: #000; font-size:16px;">Massage</div>
+        <div style="color: #6A6A6A;; font-size: 10px;">Got any new massage</div>
+      </ion-col>
+      <ion-col size="3">
+        <ion-toggle class="toogleclass" (ionChange)="toogle($event)"></ion-toggle>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
