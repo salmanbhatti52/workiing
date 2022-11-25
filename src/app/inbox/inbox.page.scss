@@ -1,0 +1,76 @@
+.textcenter{
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #03045E;
+  text-align: center;
+}
+.wrapper{
+  width: 90%;
+  margin:4% auto;
+}
+.flex-c{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.text{
+  font-weight: 500;
+  font-size: 16px;
+  color: #1A1D1E;
+}
+.para{
+  color: #6A6A6A;
+  font-weight: 400;
+  font-size: 14px;
+}
+.time{
+  color: #6A6A6A;
+  font-weight: 400;
+  font-size: 8px;
+}
+.messagebadge{
+  min-width: 24px;
+  font-size: 10px;
+  background: #5463FF;
+  min-height: 24px;
+  padding: 7px;
+  margin-top: 12%;
+}
+ion-item {
+  --padding-start: 0px;
+  --inner-padding-end: 0px;
+  --ion-safe-area-right: 0;
+  }
+  .item-inner {
+    padding-right: 0px!important;
+ }
+
+
+ .tabsbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  background: #FFFFFF;
+  box-shadow: 0px -10px 35px -15px rgb(64 59 75 / 15%);
+  border-radius: 30px 30px 0px 0px;
+  padding: 6px 0px;
+}
+.tlbl{
+  font-size:11px;
+  margin-top: 6px;
+  margin-bottom: 2px;
+  font-weight:400;
+}
+.tbadge{
+  min-width: 20px;
+  font-size: 12px;
+  left: calc(50% + 3px);
+  top: calc(0% + -5px);
+  background: #5463FF;
+  min-height: 20px;
+  border-radius: 90px;
+  position: absolute;
+}

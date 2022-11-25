@@ -1,0 +1,91 @@
+<ion-header [translucent]="true" class="ion-no-border cheader">
+  <ion-toolbar class="headBgGlobal">
+    <ion-row class="center-icons">
+      <ion-col size="0.3"></ion-col>
+      <ion-col size="2">
+        <ion-menu-toggle>
+          <ion-buttons>
+            <div style="width:100%;">
+              <img src="/assets/imgs/backbtn.svg">
+            </div>
+          </ion-buttons>
+        </ion-menu-toggle>
+      </ion-col>
+      <ion-col size="7" style="text-align: center;">
+        <div style="display: flex;
+        align-items: center;
+        justify-content: center;">
+          <img src="/assets/imgs/chatimg.svg" style="width:32px;height:32px;">
+          <span class="textcenter"> Anaya Sanji</span>
+        </div>
+      </ion-col>
+      <ion-col size="2.6" style="text-align: end;">
+      </ion-col>
+
+    </ion-row>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <ng-container>
+      <div class="chat" style="display: grid; grid-row-gap: 4px">
+        <ng-container>
+          <div class="sender">
+            <div class="sender_message_container">
+              <div class="senderMessage">
+                <ion-text class="textMessage">
+                  I heard u guys launching
+                  new Job?
+                </ion-text>
+              </div>
+              <img src="/assets/imgs/chatimg.svg" style="width: 20px;
+              height: 20px;
+              margin-left: 2%;
+              border-radius: 50px;">
+            </div>
+
+            <ion-row style="padding: 0px;">
+              <ion-col style="text-align: right; padding: 0px;">
+                <ion-text class="messageTimeSender">12:00 AM</ion-text>
+              </ion-col>
+
+            </ion-row>
+          </div>
+          <div class="reciever_message_cont">
+            <div class="reciever">
+              <ion-text class="textMessage">
+                Hi
+              </ion-text>
+            </div>
+            <ion-text class="messageTime">4:00 AM</ion-text>
+          </div>
+        </ng-container>
+      </div>
+    </ng-container>
+
+  </div>
+</ion-content>
+<ion-footer style="padding-left: 20px;padding-right: 20px;margin-bottom: 5%;"
+  class="ion-no-margin ion-no-padding ion-no-border">
+  <ion-toolbar class="footer">
+
+    <div style="box-shadow: 0px 10px 35px -10px #403B4B33;height:52px;">
+
+      <ion-row>
+        <ion-col size="10" style="padding-top: 0px;">
+          <ion-textarea style="height: 50px;" class="input" rows="1" cols="20" placeholder="Type a message">
+          </ion-textarea>
+        </ion-col>
+
+        <ion-col size="2" style="text-align: right; padding-right: 13px;">
+          <img src="assets/imgs/send.svg" style="margin-top: 10px;
+          height: 25px;">
+        </ion-col>
+      </ion-row>
+    </div>
+
+
+  </ion-toolbar>
+</ion-footer>

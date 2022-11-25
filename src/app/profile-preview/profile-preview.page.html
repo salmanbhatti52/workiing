@@ -1,9 +1,151 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>profile-preview</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <ion-row class="center-icons" style="position: absolute; z-index: 9999; width: 100%; top: 20px">
+    <ion-col size="0.3"></ion-col>
+    <ion-col size="2">
+      <ion-buttons>
+        <div style="width: 100%">
+          <img src="/assets/imgs/backbtnwhite.svg" />
+        </div>
+      </ion-buttons>
+    </ion-col>
+    <ion-col size="7.5" style="text-align: center">
+      <p style="
+          color: white;
+          font-family: 'Poppins', sans-serif;
+          font-size: 20px;
+          font-weight: 700;
+        ">
+        Public Profile View
+      </p>
+    </ion-col>
+    <ion-col style="text-align: center" size="2">
+      <img src="/assets/imgs/share.svg" />
+    </ion-col>
+  </ion-row>
 
+  <img style="width: 100%" src="assets/imgs/bglogo.svg" />
+
+  <div style="
+      margin-top: -20px;
+      background: rgb(255, 255, 255);
+      height: auto;
+      border-radius: 20px;
+      position: relative;
+    ">
+    <div>
+      <img style="
+          position: absolute;
+          left: 30%;
+          top: -85px;
+          border-radius: 50%;
+        " src="assets/imgs/profileimg.svg" />
+
+      <p style="color: white; margin-left: 5px">T</p>
+
+      <div style="text-align: center; margin-top: 50px">
+        <p style="font-family: 'Poppins', sans-serif; font-weight: 600">
+          Angela W.
+        </p>
+        <div style="display: flex; justify-content: center">
+          <img style="display: flex; justify-content: center" src="assets/imgs/pin.svg" />
+          <p style="
+              margin-left: 10px;
+              color: gray;
+              margin-top:3px;
+              font-size: 12px;
+              font-family: 'Poppins', sans-serif;
+            ">
+            Toronto, Canada
+          </p>
+        </div>
+      </div>
+
+      <div style="padding: 10px">
+
+        <ion-row>
+          <ion-col>
+            <p class="title1">Email</p>
+            <p class="subtitle1">AngelaQ90@gmail.com</p>
+          </ion-col>
+
+          <ion-col>
+            <p class="title1">Phone Number</p>
+            <p class="subtitle1">+1-2365-2354</p>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <p class="title1">Age</p>
+            <p class="subtitle1">Over 18</p>
+          </ion-col>
+          <ion-col>
+            <p class="title1">Looking for Job</p>
+            <p class="subtitle1">Both Full Time or Part Time</p>
+          </ion-col>
+        </ion-row>
+      </div>
+      <ion-row>
+        <ion-col>
+          <p class="title2">About me</p>
+          <p class="subtitle2">
+            Aliquam porta nisl dolor, molestie pellentesque elit molestie in. Morbi metus neque, elementum ullamcorper
+            hendrerit eget, tincidunt et nisi. Sed magna nunc, consequat vel aliquam vitae, View more
+          </p>
+        </ion-col>
+      </ion-row>
+
+      <ion-segment value="experience" id="segment" (ionChange)="segmentChanged($event)" #mySegment>
+        <ion-segment-button value="experience">
+          <ion-label>Experience</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="education">
+          <ion-label>Education</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+
+
+      <div style="width: 92%;
+      margin:4% auto;">
+
+        <div *ngIf="requestsType == 'experience'">
+          <div class="stext">Total 1.5 years experience</div>
+          <div class="main">
+            <div class="left">
+              <div class="flex0">
+                <div>
+                  <img src="assets/imgs/netflix.svg">
+                </div>
+                <div style="margin-left: 3%;margin-top: 3%;width: 100%;">
+                  <div class="maintxt">Position <span class="spantxt">Assistant Manager</span></div>
+                  <div class="maintxt1">Restaurant Team Member</div>
+                </div>
+              </div>
+              <div style="margin-top:2%;">
+                <ion-badge class="badgetxt">1.5 years experience</ion-badge>
+                <ion-badge class="badgetxt1">Hotel & Leisure</ion-badge>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="requestsType == 'education'">
+          <div class="main">
+            <div class="left">
+              <div class="flex0">
+                <div style="width: 100%;">
+                  <div class="maintxt">Institution <span class="spantxt">Institution of xyz</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="text3">Description</div>
+            <div class="text4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+              consequat
+              duis enim velit mollit. Exercitation veniam</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
 </ion-content>

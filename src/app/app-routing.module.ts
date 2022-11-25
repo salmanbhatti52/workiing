@@ -206,7 +206,19 @@ const routes: Routes = [
   {
     path: 'myjobinterview',
     loadChildren: () => import('./myjobinterview/myjobinterview.module').then( m => m.MyjobinterviewPageModule)
+  },  {
+    path: 'chats',
+    loadChildren: () => import('./chats/chats.module').then( m => m.ChatsPageModule)
   },
+  {
+    path: 'inbox',
+    loadChildren: () => import('./inbox/inbox.module').then( m => m.InboxPageModule)
+  },
+  {
+    path: 'employeprofile',
+    loadChildren: () => import('./employeprofile/employeprofile.module').then( m => m.EmployeprofilePageModule)
+  },
+
 ];
 
 @NgModule({
