@@ -7,23 +7,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./accountsetting.page.scss'],
 })
 export class AccountsettingPage implements OnInit {
-  constructor(public router: Router) {}
+  constructor(public router: Router) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   goToEditProfile() {
-    this.router.navigate(['page']);
+    this.router.navigate(['editprofile']);
   }
 
   goToChangePass() {
-    this.router.navigate(['page']);
+    this.router.navigate(['updatepassword']);
   }
 
   goToNoti() {
-    this.router.navigate(['page']);
+    this.router.navigate(['notificationsettings']);
   }
 
   goToDeleteAcc() {
-    this.router.navigate(['page']);
+    this.router.navigate(['deleteaccount']);
   }
 }

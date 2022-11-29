@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-jobslistlogin',
@@ -20,7 +21,7 @@ export class JobslistloginPage implements OnInit {
   t3 = false
   t4 = false
   t5 = false
-  constructor() { }
+  constructor(public router: Router) { }
   tab1Click() {
 
     this.t1 = true
@@ -45,6 +46,23 @@ export class JobslistloginPage implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+
+
+  goToInbox() {
+    this.router.navigate(['inbox'])
+  }
+
+  goToPostJob() {
+    this.router.navigate(['job1'])
+  }
+  goToSaveJobs() {
+    this.router.navigate(['mypostedjob1'])
+  }
+
+  goToProfile() {
+    this.router.navigate(['profile'])
   }
 
 }

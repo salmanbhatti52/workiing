@@ -16,13 +16,13 @@ export class AppComponent {
     { title: 'Review App', url: '/review', icon: 'menureview.svg' },
     {
       title: 'Contact Workiing',
-      url: '/folder/Trash',
+      url: '/review2',
       icon: 'menucontact.svg',
     },
     { title: 'Terms & Conditions', url: '/terms', icon: 'menuterms.svg' },
     { title: 'Privacy Policy', url: '/privacypolicy', icon: 'menuprivacy.svg' },
     { title: 'FAQ’s', url: '/faq', icon: 'menufaq.svg' },
-    { title: 'Logout', url: '/folder/Spam', icon: 'menulogout.svg' },
+    { title: 'Logout', url: '/signin', icon: 'menulogout.svg' },
   ];
-  constructor() {}
+  constructor() { }
 }

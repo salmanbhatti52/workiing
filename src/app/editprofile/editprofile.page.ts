@@ -2,6 +2,7 @@ import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { NavController } from '@ionic/angular';
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-editprofile',
   templateUrl: './editprofile.page.html',
@@ -36,9 +37,14 @@ export class EditprofilePage implements OnInit {
   empsearch = 0;
   constructor(public route: ActivatedRoute,
     public http: HttpClient,
-    public navCtrl: NavController) { }
+    public navCtrl: NavController,
+    public location: Location) { }
 
   ngOnInit() {
+  }
+
+  goBack() {
+    this.location.back()
   }
 
   ionViewWillEnter() {

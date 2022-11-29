@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
@@ -8,7 +9,7 @@ import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 export class EmployeprofilePage implements OnInit {
   @ViewChild('mySegment', { read: ElementRef }) private mySegment!: ElementRef;
   requestsType: any;
-  constructor() { }
+  constructor(public location: Location) { }
 
   ngOnInit() {
   }
@@ -38,6 +39,10 @@ export class EmployeprofilePage implements OnInit {
 
     }
     localStorage.setItem('requestType', this.requestsType);
+  }
+
+  goBack() {
+    this.location.back()
   }
 
 }

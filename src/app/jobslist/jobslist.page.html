@@ -17,8 +17,8 @@
       </ion-col>
       <ion-col class="titleclass" size="2.5">
         <div style="display:flex;">
-          <img src="/assets/imgs/location-dot.svg" style="margin-right: 25%;">
-          <img src="/assets/imgs/user2.svg">
+          <img (click)="goToMap()" src="/assets/imgs/location-dot.svg" style="margin-right: 25%;">
+          <img (click)="goToProfile()" src="/assets/imgs/user2.svg">
         </div>
 
       </ion-col>
@@ -104,8 +104,8 @@
 </ion-content>
 <ion-footer class="ion-no-border footercls">
   <div style="text-align: center;">
-    <ion-button class="btn1">Log In</ion-button>
-    <ion-button class="btn2">Sign up</ion-button>
+    <ion-button class="btn1" (click)="goToLogin()">Log In</ion-button>
+    <ion-button class="btn2" (click)="goToSignup()">Sign up</ion-button>
   </div>
   <p class="para">Or Continue with</p>
   <div style="display: flex;

@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,7 +10,7 @@ export class UpdatepasswordPage implements OnInit {
   showPass = false;
   newshowPass = false;
   confirmshowPass = false;
-  constructor() { }
+  constructor(public location: Location) { }
 
   ngOnInit() {
   }
@@ -22,6 +23,10 @@ export class UpdatepasswordPage implements OnInit {
   }
   confirmtogglePass() {
     this.confirmshowPass = !this.confirmshowPass;
+  }
+
+  goBack() {
+    this.location.back()
   }
 
 

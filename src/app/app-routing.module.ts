@@ -3,7 +3,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'onboradingscreen',
+    path: '',
     redirectTo: 'onboradingscreen',
     pathMatch: 'full'
   },
@@ -121,122 +121,123 @@ const routes: Routes = [
   },
   {
     path: 'basicprofile3',
-    loadChildren: () => import('./basicprofile3/basicprofile3.module').then( m => m.Basicprofile3PageModule)
+    loadChildren: () => import('./basicprofile3/basicprofile3.module').then(m => m.Basicprofile3PageModule)
   },
   {
     path: 'addexperience',
-    loadChildren: () => import('./addexperience/addexperience.module').then( m => m.AddexperiencePageModule)
+    loadChildren: () => import('./addexperience/addexperience.module').then(m => m.AddexperiencePageModule)
   },
   {
     path: 'job13',
-    loadChildren: () => import('./job13/job13.module').then( m => m.Job13PageModule)
+    loadChildren: () => import('./job13/job13.module').then(m => m.Job13PageModule)
   },
   {
     path: 'job14',
-    loadChildren: () => import('./job14/job14.module').then( m => m.Job14PageModule)
+    loadChildren: () => import('./job14/job14.module').then(m => m.Job14PageModule)
   },
   {
     path: 'basicprofile4',
-    loadChildren: () => import('./basicprofile4/basicprofile4.module').then( m => m.Basicprofile4PageModule)
+    loadChildren: () => import('./basicprofile4/basicprofile4.module').then(m => m.Basicprofile4PageModule)
   },
   {
     path: 'basicprofile5',
-    loadChildren: () => import('./basicprofile5/basicprofile5.module').then( m => m.Basicprofile5PageModule)
+    loadChildren: () => import('./basicprofile5/basicprofile5.module').then(m => m.Basicprofile5PageModule)
   },
   {
     path: 'addeducation',
-    loadChildren: () => import('./addeducation/addeducation.module').then( m => m.AddeducationPageModule)
+    loadChildren: () => import('./addeducation/addeducation.module').then(m => m.AddeducationPageModule)
   },
   {
     path: 'basicprofile6',
-    loadChildren: () => import('./basicprofile6/basicprofile6.module').then( m => m.Basicprofile6PageModule)
+    loadChildren: () => import('./basicprofile6/basicprofile6.module').then(m => m.Basicprofile6PageModule)
   },
   {
     path: 'completeprofilepopup',
-    loadChildren: () => import('./completeprofilepopup/completeprofilepopup.module').then( m => m.CompleteprofilepopupPageModule)
+    loadChildren: () => import('./completeprofilepopup/completeprofilepopup.module').then(m => m.CompleteprofilepopupPageModule)
   },
   {
     path: 'profile-preview',
-    loadChildren: () => import('./profile-preview/profile-preview.module').then( m => m.ProfilePreviewPageModule)
+    loadChildren: () => import('./profile-preview/profile-preview.module').then(m => m.ProfilePreviewPageModule)
   },
   {
     path: 'accountsetting',
-    loadChildren: () => import('./accountsetting/accountsetting.module').then( m => m.AccountsettingPageModule)
+    loadChildren: () => import('./accountsetting/accountsetting.module').then(m => m.AccountsettingPageModule)
   },
   {
     path: 'faq',
-    loadChildren: () => import('./faq/faq.module').then( m => m.FaqPageModule)
+    loadChildren: () => import('./faq/faq.module').then(m => m.FaqPageModule)
   },
   {
     path: 'privacypolicy',
-    loadChildren: () => import('./privacypolicy/privacypolicy.module').then( m => m.PrivacypolicyPageModule)
+    loadChildren: () => import('./privacypolicy/privacypolicy.module').then(m => m.PrivacypolicyPageModule)
   },
   {
     path: 'terms',
-    loadChildren: () => import('./terms/terms.module').then( m => m.TermsPageModule)
+    loadChildren: () => import('./terms/terms.module').then(m => m.TermsPageModule)
   },
   {
     path: 'invitefriend',
-    loadChildren: () => import('./invitefriend/invitefriend.module').then( m => m.InvitefriendPageModule)
+    loadChildren: () => import('./invitefriend/invitefriend.module').then(m => m.InvitefriendPageModule)
   },
   {
     path: 'review',
-    loadChildren: () => import('./review/review.module').then( m => m.ReviewPageModule)
+    loadChildren: () => import('./review/review.module').then(m => m.ReviewPageModule)
   },
   {
     path: 'review2',
-    loadChildren: () => import('./review2/review2.module').then( m => m.Review2PageModule)
+    loadChildren: () => import('./review2/review2.module').then(m => m.Review2PageModule)
   },
   {
     path: 'mypostedjob2',
-    loadChildren: () => import('./mypostedjob2/mypostedjob2.module').then( m => m.Mypostedjob2PageModule)
+    loadChildren: () => import('./mypostedjob2/mypostedjob2.module').then(m => m.Mypostedjob2PageModule)
   },
   {
     path: 'mypostedjob1',
-    loadChildren: () => import('./mypostedjob1/mypostedjob1.module').then( m => m.Mypostedjob1PageModule)
+    loadChildren: () => import('./mypostedjob1/mypostedjob1.module').then(m => m.Mypostedjob1PageModule)
   },
   {
     path: 'myjobpedning',
-    loadChildren: () => import('./myjobpedning/myjobpedning.module').then( m => m.MyjobpedningPageModule)
+    loadChildren: () => import('./myjobpedning/myjobpedning.module').then(m => m.MyjobpedningPageModule)
   },
   {
     path: 'myjobshortlist',
-    loadChildren: () => import('./myjobshortlist/myjobshortlist.module').then( m => m.MyjobshortlistPageModule)
+    loadChildren: () => import('./myjobshortlist/myjobshortlist.module').then(m => m.MyjobshortlistPageModule)
   },
   {
     path: 'myjobinterview',
-    loadChildren: () => import('./myjobinterview/myjobinterview.module').then( m => m.MyjobinterviewPageModule)
-  },  {
+    loadChildren: () => import('./myjobinterview/myjobinterview.module').then(m => m.MyjobinterviewPageModule)
+  },
+  {
     path: 'chats',
-    loadChildren: () => import('./chats/chats.module').then( m => m.ChatsPageModule)
+    loadChildren: () => import('./chats/chats.module').then(m => m.ChatsPageModule)
   },
   {
     path: 'inbox',
-    loadChildren: () => import('./inbox/inbox.module').then( m => m.InboxPageModule)
+    loadChildren: () => import('./inbox/inbox.module').then(m => m.InboxPageModule)
   },
   {
     path: 'employeprofile',
-    loadChildren: () => import('./employeprofile/employeprofile.module').then( m => m.EmployeprofilePageModule)
+    loadChildren: () => import('./employeprofile/employeprofile.module').then(m => m.EmployeprofilePageModule)
   },
   {
     path: 'profile',
-    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
+    loadChildren: () => import('./profile/profile.module').then(m => m.ProfilePageModule)
   },
   {
     path: 'editprofile',
-    loadChildren: () => import('./editprofile/editprofile.module').then( m => m.EditprofilePageModule)
+    loadChildren: () => import('./editprofile/editprofile.module').then(m => m.EditprofilePageModule)
   },
   {
     path: 'updatepassword',
-    loadChildren: () => import('./updatepassword/updatepassword.module').then( m => m.UpdatepasswordPageModule)
+    loadChildren: () => import('./updatepassword/updatepassword.module').then(m => m.UpdatepasswordPageModule)
   },
   {
     path: 'notificationsettings',
-    loadChildren: () => import('./notificationsettings/notificationsettings.module').then( m => m.NotificationsettingsPageModule)
+    loadChildren: () => import('./notificationsettings/notificationsettings.module').then(m => m.NotificationsettingsPageModule)
   },
   {
     path: 'deleteaccount',
-    loadChildren: () => import('./deleteaccount/deleteaccount.module').then( m => m.DeleteaccountPageModule)
+    loadChildren: () => import('./deleteaccount/deleteaccount.module').then(m => m.DeleteaccountPageModule)
   },
 
 ];

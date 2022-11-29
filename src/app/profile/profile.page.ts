@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +8,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilePage implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit() {
   }
+
+  goToEditProfile() {
+    this.router.navigate(['editprofile'])
+  }
+
+  goToJobList() {
+    this.router.navigate(['/jobslistlogin'])
+  }
+  goToProfile() {
+    this.router.navigate(['/jobslistlogin'])
+
+  }
+
+
+  goToMsg() {
+    this.router.navigate(['/inbox'])
+
+  }
+
+
+  goToSaveJobs() {
+    this.router.navigate(['/jobslistlogin'])
+
+  }
+
 
 }

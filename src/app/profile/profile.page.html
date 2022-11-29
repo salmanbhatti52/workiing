@@ -20,7 +20,7 @@
         <ion-col style="text-align: end" size="4">
           <div>
             <img src="/assets/imgs/eye.svg" style="margin-right: 7%" />
-            <img src="/assets/imgs/editprofile.svg" style="margin-left: 13px" />
+            <img (click)="goToEditProfile()" src="/assets/imgs/editprofile.svg" style="margin-left: 13px" />
           </div>
         </ion-col>
       </ion-row>
@@ -135,11 +135,11 @@
 </ion-content>
 <ion-footer class="ion-no-border">
   <div class="tabsbar">
-    <div>
+    <div (click)="goToJobList()">
       <img src="/assets/imgs/icons/suitcase.svg">
       <div class="tlbl">Find Job</div>
     </div>
-    <div style="position: relative;">
+    <div (click)="goToMsg()" style="position: relative;">
       <img src="/assets/imgs/icons/message-lines.svg">
       <div class="tlbl">Messages</div>
       <ion-badge class="tbadge">1</ion-badge>
@@ -147,11 +147,11 @@
     <div>
       <img src="/assets/imgs/icons/add.svg">
     </div>
-    <div>
+    <div (click)="goToSaveJobs()">
       <img src="/assets/imgs/icons/bookmark.svg">
       <div class="tlbl">Save Jobs</div>
     </div>
-    <div>
+    <div (click)="goToProfile()">
       <img src="/assets/imgs/icons/useractive.svg">
       <div class="tlbl">Profile</div>
     </div>

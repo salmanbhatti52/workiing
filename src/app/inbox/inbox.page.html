@@ -59,7 +59,7 @@
         </ion-item-options>
       </ion-item-sliding>
 
-      <ion-item-sliding>
+      <ion-item-sliding (click)="goToChat()">
         <ion-item lines="none" no-lines no-padding style="margin-bottom: 5%;">
           <div class="flex-c">
             <div>
@@ -88,7 +88,7 @@
         </ion-item-options>
       </ion-item-sliding>
 
-      <ion-item-sliding>
+      <ion-item-sliding (click)="goToChat()">
         <ion-item lines="none" no-lines no-padding style="margin-bottom: 5%;">
           <div class="flex-c">
             <div>
@@ -121,23 +121,23 @@
 </ion-content>
 <ion-footer class="ion-no-border">
   <div class="tabsbar">
-    <div>
+    <div (click)="goToJobList()">
       <img src="/assets/imgs/icons/suitcase.svg">
       <div class="tlbl">Find Job</div>
     </div>
-    <div style="position: relative;">
+    <div (click)="goToInbox()" style="position: relative;">
       <img src="/assets/imgs/icons/message-linesactive.svg">
       <div class="tlbl">Messages</div>
       <ion-badge class="tbadge">1</ion-badge>
     </div>
-    <div>
+    <div (click)="goToPostJob()">
       <img src="/assets/imgs/icons/add.svg">
     </div>
-    <div>
+    <div (click)="goToSaveJobs()">
       <img src="/assets/imgs/icons/bookmark.svg">
       <div class="tlbl">Save Jobs</div>
     </div>
-    <div>
+    <div (click)="goToProfile()">
       <img src="/assets/imgs/icons/user.svg">
       <div class="tlbl">Profile</div>
     </div>

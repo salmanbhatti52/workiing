@@ -1,4 +1,6 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-chats',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatsPage implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router,
+    public location: Location) { }
 
   ngOnInit() {
+  }
+  goToOtheUserProfileDetail() {
+    this.router.navigate(['employeprofile'])
+  }
+
+  goBack() {
+    this.location.back()
   }
 
 }

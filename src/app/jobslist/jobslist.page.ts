@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-jobslist',
@@ -15,9 +16,26 @@ export class JobslistPage implements OnInit {
     spaceBetween: 10,
   };
   jobslist = [{ image: 'assets/imgs/google.svg', name: 'Restaurant Team Member', nickname: 'Google', location: 'Toronto, Canada', storename: 'Testaurant/Food Server' }, { image: 'assets/imgs/google.svg', name: 'Restaurant Team Member', nickname: 'Google', location: 'Toronto, Canada', storename: 'Testaurant/Food Server' }]
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit() {
   }
+
+  goToLogin() {
+    this.router.navigate(['signin'])
+  }
+
+  goToSignup() {
+    this.router.navigate(['signup'])
+  }
+
+  goToProfile() {
+    this.router.navigate(['profile'])
+  }
+
+  goToMap() {
+    this.router.navigate(['jobsmaps'])
+  }
+
 
 }
