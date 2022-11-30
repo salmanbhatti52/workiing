@@ -83,7 +83,7 @@
   </div>
 
   <!-- modal open  -->
-  <ion-modal trigger="open-modal" [initialBreakpoint]="0.70" [breakpoints]="[0, 0.25, 0.5,0.75]"
+  <ion-modal trigger="open-modal" [initialBreakpoint]="0.80" [breakpoints]="[0, 0.25, 0.5,0.85]"
     (willDismiss)="onWillDismiss($event)">
     <ng-template>
       <div class="wrapper">
@@ -96,7 +96,7 @@
             (ionChange)="verifyEvent(checkboxes)">
           </ion-checkbox>
         </div>
-        <div style="display:flex;margin-top: 4%;">
+        <div style="display:flex;margin-top: 4%;justify-content: center;">
           <ion-button class="btn1">Delete</ion-button>
           <ion-button class="btn2">Not Now</ion-button>
         </div>

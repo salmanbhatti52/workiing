@@ -26,9 +26,9 @@ export class Job3Page implements OnInit {
   selectedoptIdAge = 0;
   selectedoptIdReply = 0;
 
-  constructor(public router: Router) {}
+  constructor(public router: Router) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   optClick(opt: any) {
     console.log('optClick', opt);
@@ -49,5 +49,25 @@ export class Job3Page implements OnInit {
 
   next() {
     this.router.navigate(['jobcat']);
+  }
+
+
+  goToJobList() {
+    this.router.navigate(['jobslistlogin'])
+  }
+
+  goToInbox() {
+    this.router.navigate(['inbox'])
+  }
+
+  goToPostJob() {
+    this.router.navigate(['job1'])
+  }
+  goToSaveJobs() {
+    this.router.navigate(['mypostedjob1'])
+  }
+
+  goToProfile() {
+    this.router.navigate(['profile'])
   }
 }
