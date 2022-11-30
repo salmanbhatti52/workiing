@@ -139,12 +139,12 @@
       <img src="/assets/imgs/icons/suitcase.svg">
       <div class="tlbl">Find Job</div>
     </div>
-    <div (click)="goToMsg()" style="position: relative;">
+    <div (click)="goToInbox()" style="position: relative;">
       <img src="/assets/imgs/icons/message-lines.svg">
       <div class="tlbl">Messages</div>
       <ion-badge class="tbadge">1</ion-badge>
     </div>
-    <div>
+    <div (click)="goToPostJob()">
       <img src="/assets/imgs/icons/add.svg">
     </div>
     <div (click)="goToSaveJobs()">

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-inbox',
@@ -8,13 +9,14 @@ import { Router } from '@angular/router';
 })
 export class InboxPage implements OnInit {
 
-  constructor(public router: Router) { }
+  constructor(public router: Router,
+    public navCtrl: NavController) { }
 
   ngOnInit() {
   }
 
   goToChat() {
-    this.router.navigate(['/chats'])
+    this.navCtrl.navigateForward('chats')
 
   }
 

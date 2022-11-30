@@ -16,7 +16,7 @@ export class Job1Page implements OnInit {
   upicon = false;
   flaglist = false;
   showflags = true;
-  constructor(public http: HttpClient, public router: Router) {}
+  constructor(public http: HttpClient, public router: Router) { }
 
   ngOnInit() {
     this.setItems();
@@ -52,5 +52,29 @@ export class Job1Page implements OnInit {
 
   next() {
     this.router.navigate(['job2']);
+  }
+
+
+
+
+
+
+  goToJobList() {
+    this.router.navigate(['jobslistlogin'])
+  }
+
+  goToInbox() {
+    this.router.navigate(['inbox'])
+  }
+
+  goToPostJob() {
+    this.router.navigate(['job1'])
+  }
+  goToSaveJobs() {
+    this.router.navigate(['mypostedjob1'])
+  }
+
+  goToProfile() {
+    this.router.navigate(['profile'])
   }
 }

@@ -17,25 +17,35 @@ export class ProfilePage implements OnInit {
     this.router.navigate(['editprofile'])
   }
 
+
+
+
+
+
+
+
+
+
   goToJobList() {
-    this.router.navigate(['/jobslistlogin'])
-  }
-  goToProfile() {
-    this.router.navigate(['/jobslistlogin'])
-
+    this.router.navigate(['jobslistlogin'])
   }
 
-
-  goToMsg() {
-    this.router.navigate(['/inbox'])
-
+  goToInbox() {
+    this.router.navigate(['inbox'])
   }
 
-
+  goToPostJob() {
+    this.router.navigate(['job1'])
+  }
   goToSaveJobs() {
-    this.router.navigate(['/jobslistlogin'])
-
+    this.router.navigate(['mypostedjob1'])
   }
+
+  goToProfile() {
+    this.router.navigate(['profile'])
+  }
+
+
 
 
 }

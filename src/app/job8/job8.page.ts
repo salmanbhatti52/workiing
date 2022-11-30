@@ -13,9 +13,9 @@ export class Job8Page implements OnInit {
     { id: 2, name: 'No' },
   ];
 
-  constructor(public router: Router) {}
+  constructor(public router: Router) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   optClick(opt: any) {
     console.log('optClick', opt);
@@ -25,5 +25,34 @@ export class Job8Page implements OnInit {
 
   next() {
     this.router.navigate(['job9']);
+  }
+
+
+
+
+
+
+
+
+
+
+
+  goToJobList() {
+    this.router.navigate(['jobslistlogin'])
+  }
+
+  goToInbox() {
+    this.router.navigate(['inbox'])
+  }
+
+  goToPostJob() {
+    this.router.navigate(['job1'])
+  }
+  goToSaveJobs() {
+    this.router.navigate(['mypostedjob1'])
+  }
+
+  goToProfile() {
+    this.router.navigate(['profile'])
   }
 }

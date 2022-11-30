@@ -3,11 +3,13 @@
     <ion-row class="center-icons">
       <ion-col size="0.3"></ion-col>
       <ion-col size="2">
-        <ion-buttons>
-          <div style="width: 100%">
-            <img src="/assets/imgs/menu.svg" />
-          </div>
-        </ion-buttons>
+        <ion-menu-toggle>
+          <ion-buttons>
+            <div style="width: 100%">
+              <img src="/assets/imgs/menu.svg" />
+            </div>
+          </ion-buttons>
+        </ion-menu-toggle>
       </ion-col>
       <ion-col size="7.5" style="text-align: center">
         <ion-label class="textcenter">Post a Job</ion-label>
@@ -32,11 +34,8 @@
       <p class="title1">Job Type</p>
 
       <div class="inputfield">
-        <ion-input class="input" type="email" placeholder="Compny Website"
-          ><img
-            style="margin: 15px 7px 14px 15px"
-            src="/assets/imgs/browser.svg"
-          />
+        <ion-input class="input" type="email" placeholder="Compny Website"><img style="margin: 15px 7px 14px 15px"
+            src="/assets/imgs/browser.svg" />
         </ion-input>
       </div>
 
@@ -44,32 +43,17 @@
 
       <div style="display: flex">
         <div class="inputfield">
-          <ion-input
-            style="padding: 5px 10px !important"
-            class="input"
-            type="text"
-            placeholder="From"
-          >
+          <ion-input style="padding: 5px 10px !important" class="input" type="text" placeholder="From">
           </ion-input>
         </div>
 
         <div class="inputfield" style="margin-left: 20px">
-          <ion-input
-            style="padding: 5px 10px !important"
-            class="input"
-            type="email"
-            placeholder="For"
-          >
+          <ion-input style="padding: 5px 10px !important" class="input" type="email" placeholder="For">
           </ion-input>
         </div>
 
         <div class="inputfield" style="margin-left: 20px">
-          <ion-input
-            style="padding: 5px 10px !important"
-            class="input"
-            type="email"
-            placeholder="Per Hour"
-          >
+          <ion-input style="padding: 5px 10px !important" class="input" type="email" placeholder="Per Hour">
           </ion-input>
         </div>
       </div>
@@ -78,23 +62,11 @@
     <p style="margin-left: 20px">Tips/Comission</p>
 
     <div style="display: flex">
-      <div
-        (click)="optClick(opt)"
-        [class.divcheck]="selectedoptId == opt.id"
-        [class.divuncheck]="selectedoptId != opt.id"
-        *ngFor="let opt of optionArrAge"
-      >
+      <div (click)="optClick(opt)" [class.divcheck]="selectedoptId == opt.id"
+        [class.divuncheck]="selectedoptId != opt.id" *ngFor="let opt of optionArrAge">
         <ion-label>{{opt.name}}</ion-label>
-        <img
-          *ngIf="selectedoptId == opt.id"
-          class="imgsize"
-          src="assets/imgs/checkwhite.svg"
-        />
-        <img
-          *ngIf="selectedoptId != opt.id"
-          class="imgsize"
-          src="assets/imgs/checkgray.svg"
-        />
+        <img *ngIf="selectedoptId == opt.id" class="imgsize" src="assets/imgs/checkwhite.svg" />
+        <img *ngIf="selectedoptId != opt.id" class="imgsize" src="assets/imgs/checkgray.svg" />
       </div>
     </div>
 
@@ -103,58 +75,30 @@
     <p style="margin-left: 20px">Maximum Age</p>
 
     <div style="display: flex">
-      <div
-        (click)="optClickAge(opt)"
-        [class.divcheck]="selectedoptIdAge == opt.id"
-        [class.divuncheck]="selectedoptIdAge != opt.id"
-        *ngFor="let opt of ageArr"
-      >
+      <div (click)="optClickAge(opt)" [class.divcheck]="selectedoptIdAge == opt.id"
+        [class.divuncheck]="selectedoptIdAge != opt.id" *ngFor="let opt of ageArr">
         <ion-label>{{opt.name}}</ion-label>
-        <img
-          *ngIf="selectedoptIdAge == opt.id"
-          class="imgsize"
-          src="assets/imgs/checkwhite.svg"
-        />
-        <img
-          *ngIf="selectedoptIdAge != opt.id"
-          class="imgsize"
-          src="assets/imgs/checkgray.svg"
-        />
+        <img *ngIf="selectedoptIdAge == opt.id" class="imgsize" src="assets/imgs/checkwhite.svg" />
+        <img *ngIf="selectedoptIdAge != opt.id" class="imgsize" src="assets/imgs/checkgray.svg" />
       </div>
     </div>
 
     <!-- 3 -->
 
     <p style="margin-bottom: 0px; margin-left: 20px">Automatically Reply</p>
-    <ion-label class="smalltitle"
-      >Automatically send a message to new applicants</ion-label
-    >
+    <ion-label class="smalltitle">Automatically send a message to new applicants</ion-label>
 
     <div style="margin-top: 20px; display: flex">
-      <div
-        (click)="optClickReply(opt)"
-        [class.divcheck]="selectedoptIdReply == opt.id"
-        [class.divuncheck]="selectedoptIdReply != opt.id"
-        *ngFor="let opt of optionArr"
-      >
+      <div (click)="optClickReply(opt)" [class.divcheck]="selectedoptIdReply == opt.id"
+        [class.divuncheck]="selectedoptIdReply != opt.id" *ngFor="let opt of optionArr">
         <ion-label>{{opt.name}}</ion-label>
-        <img
-          *ngIf="selectedoptIdReply == opt.id"
-          class="imgsize"
-          src="assets/imgs/checkwhite.svg"
-        />
-        <img
-          *ngIf="selectedoptIdReply != opt.id"
-          class="imgsize"
-          src="assets/imgs/checkgray.svg"
-        />
+        <img *ngIf="selectedoptIdReply == opt.id" class="imgsize" src="assets/imgs/checkwhite.svg" />
+        <img *ngIf="selectedoptIdReply != opt.id" class="imgsize" src="assets/imgs/checkgray.svg" />
       </div>
     </div>
 
     <div style="width: 90%; margin: 0px auto; margin-top: 20px">
-      <ion-button
-        (click)="next()"
-        style="
+      <ion-button (click)="next()" style="
           --background: #03045e;
           font-style: normal;
           font-weight: 500;
@@ -166,8 +110,7 @@
           height: 54px;
           --border-radius: 12px;
           text-transform: capitalize;
-        "
-      >
+        ">
         Save & Next
       </ion-button>
     </div>

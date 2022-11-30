@@ -1,9 +1,21 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>deleteaccount</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
+  <div class="wrapper">
+    <div class="thead">Delete you account?</div>
+    <div class="text">Hi, Adom Shafi</div>
+    <div class="para">We’re sorry to see you gi. Mind sharing with us the reason why you are account?</div>
+    <div class="flex-c" *ngFor="let checkboxes of Checkboxes">
+      <span class="lbl">{{checkboxes.question}}</span>
+      <ion-checkbox mode="md" class="check" [(ngModel)]="checkboxes.isItemChecked"
+        (ionChange)="verifyEvent(checkboxes)">
+      </ion-checkbox>
+    </div>
+
+  </div>
 
 </ion-content>

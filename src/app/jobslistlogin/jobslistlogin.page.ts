@@ -65,4 +65,7 @@ export class JobslistloginPage implements OnInit {
     this.router.navigate(['profile'])
   }
 
+  seedetail() {
+    this.router.navigate(['jobdetail'])
+  }
 }

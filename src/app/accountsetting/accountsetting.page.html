@@ -34,14 +34,8 @@
         <p class="smalltitle">Edit Profile</p>
       </ion-col>
 
-      <ion-col
-        size="2"
-        style="display: flex; align-items: center; justify-content: flex-end"
-      >
-        <img
-          src="/assets/imgs/rightarr.svg"
-          style="height: 24px; width: 20px"
-        />
+      <ion-col size="2" style="display: flex; align-items: center; justify-content: flex-end">
+        <img src="/assets/imgs/rightarr.svg" style="height: 24px; width: 20px" />
       </ion-col>
     </ion-row>
 
@@ -54,14 +48,8 @@
         <p class="smalltitle">Change Password</p>
       </ion-col>
 
-      <ion-col
-        size="2"
-        style="display: flex; align-items: center; justify-content: flex-end"
-      >
-        <img
-          src="/assets/imgs/rightarr.svg"
-          style="height: 24px; width: 20px"
-        />
+      <ion-col size="2" style="display: flex; align-items: center; justify-content: flex-end">
+        <img src="/assets/imgs/rightarr.svg" style="height: 24px; width: 20px" />
       </ion-col>
     </ion-row>
 
@@ -74,18 +62,12 @@
         <p class="smalltitle">Notifications setting</p>
       </ion-col>
 
-      <ion-col
-        size="2"
-        style="display: flex; align-items: center; justify-content: flex-end"
-      >
-        <img
-          src="/assets/imgs/rightarr.svg"
-          style="height: 24px; width: 20px"
-        />
+      <ion-col size="2" style="display: flex; align-items: center; justify-content: flex-end">
+        <img src="/assets/imgs/rightarr.svg" style="height: 24px; width: 20px" />
       </ion-col>
     </ion-row>
 
-    <ion-row class="rowclass" (click)="goToDeleteAcc()">
+    <ion-row class="rowclass" (click)="goToDeleteAcc()" id="open-modal">
       <ion-col size="2" style="text-align: center">
         <img src="/assets/imgs/trash.svg" />
       </ion-col>
@@ -94,15 +76,31 @@
         <p class="smalltitle">Delete account</p>
       </ion-col>
 
-      <ion-col
-        size="2"
-        style="display: flex; align-items: center; justify-content: flex-end"
-      >
-        <img
-          src="/assets/imgs/rightarr.svg"
-          style="height: 24px; width: 20px"
-        />
+      <ion-col size="2" style="display: flex; align-items: center; justify-content: flex-end">
+        <img src="/assets/imgs/rightarr.svg" style="height: 24px; width: 20px" />
       </ion-col>
     </ion-row>
   </div>
+
+  <!-- modal open  -->
+  <ion-modal trigger="open-modal" [initialBreakpoint]="0.70" [breakpoints]="[0, 0.25, 0.5,0.75]"
+    (willDismiss)="onWillDismiss($event)">
+    <ng-template>
+      <div class="wrapper">
+        <div class="thead">Delete you account?</div>
+        <div class="text">Hi, Adom Shafi</div>
+        <div class="para">We’re sorry to see you gi. Mind sharing with us the reason why you are account?</div>
+        <div class="flex-c" *ngFor="let checkboxes of Checkboxes">
+          <span class="lbl">{{checkboxes.question}}</span>
+          <ion-checkbox mode="md" class="check" [(ngModel)]="checkboxes.isItemChecked"
+            (ionChange)="verifyEvent(checkboxes)">
+          </ion-checkbox>
+        </div>
+        <div style="display:flex;margin-top: 4%;">
+          <ion-button class="btn1">Delete</ion-button>
+          <ion-button class="btn2">Not Now</ion-button>
+        </div>
+      </div>
+    </ng-template>
+  </ion-modal>
 </ion-content>

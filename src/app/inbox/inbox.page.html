@@ -16,7 +16,7 @@
       </ion-col>
       <ion-col size="2.6" style="text-align: end;">
 
-        <img src="/assets/imgs/userprofile.svg" style="margin-right:7%;">
+        <img src="/assets/imgs/user.png" style="margin-right:7%;border-radius: 50%;width: 44px;">
 
 
       </ion-col>
@@ -32,12 +32,12 @@
     <ion-list>
       <ion-item-sliding>
         <ion-item lines="none" no-lines no-padding style="margin-bottom: 5%;">
-          <div class="flex-c">
-            <div>
-              <img src="/assets/imgs/chatimg.svg" style="width:40px;height:40px;position: relative;">
+          <div class="flex-c" (click)="goToChat()">
+            <div style="position: relative;">
+              <img src="/assets/imgs/user.png" style="width:40px;border-radius: 50%;">
               <img src="/assets/imgs/online.svg" style="position: absolute;
              top: 60%;
-            left: 10.5%;">
+            left: 66.5%;">
             </div>
             <div class="textdiv">
               <div class="text">Rozanne Barrientes</div>
@@ -62,11 +62,11 @@
       <ion-item-sliding (click)="goToChat()">
         <ion-item lines="none" no-lines no-padding style="margin-bottom: 5%;">
           <div class="flex-c">
-            <div>
-              <img src="/assets/imgs/chatimg.svg" style="width:40px;height:40px;position: relative;">
+            <div style="position: relative;">
+              <img src="/assets/imgs/user.png" style="width:40px;border-radius: 50%;">
               <img src="/assets/imgs/offline.svg" style="position: absolute;
              top: 60%;
-            left: 10.5%;">
+            left: 66.5%;">
             </div>
             <div class="textdiv">
               <div class="text">Rozanne Barrientes</div>
@@ -91,11 +91,11 @@
       <ion-item-sliding (click)="goToChat()">
         <ion-item lines="none" no-lines no-padding style="margin-bottom: 5%;">
           <div class="flex-c">
-            <div>
-              <img src="/assets/imgs/chatimg.svg" style="width:40px;height:40px;position: relative;">
+            <div style="position: relative;">
+              <img src="/assets/imgs/user.png" style="width:40px;border-radius: 50%;">
               <img src="/assets/imgs/notactive.svg" style="position: absolute;
              top: 60%;
-            left: 10.5%;">
+            left: 66.5%;">
             </div>
             <div class="textdiv">
               <div class="text">Elizabeth Olsen</div>

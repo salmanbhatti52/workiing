@@ -40,10 +40,11 @@
         <img src="assets/imgs/pen.svg" />
         <p style="margin: 0px 0px 0px 10px">Write your feedback here</p>
       </div>
-      <ion-textarea class="input" rows="5" placeholder=""></ion-textarea>
+      <ion-textarea class="input" rows="5" placeholder="" maxlength="1000" (ionChange)="crazyEvent($event)">
+      </ion-textarea>
 
       <div>
-        <p style="text-align: right; margin: 0px" class="smalltitle">0/1000</p>
+        <p style="text-align: right; margin: 0px" class="smalltitle">{{charcount}}/1000</p>
       </div>
     </div>
 

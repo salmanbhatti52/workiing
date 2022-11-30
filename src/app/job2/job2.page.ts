@@ -9,9 +9,9 @@ import { Job4Page } from '../job4/job4.page';
 })
 export class Job2Page implements OnInit {
   otp: any;
-  constructor(public modal: ModalController, public router: Router) {}
+  constructor(public modal: ModalController, public router: Router) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   onOtpChange(event: any) {
     console.log(event, 'eventevent');
@@ -30,4 +30,19 @@ export class Job2Page implements OnInit {
   next() {
     this.router.navigate(['job5']);
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
