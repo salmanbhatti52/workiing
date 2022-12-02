@@ -1,3 +1,4 @@
+import { NavController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -25,7 +26,7 @@ export class JobfilterPage implements OnInit {
   selectedoptIdReply = 0;
   distance = [{ miles: '10 miles', active: false }]
   choosearray = [{ name: 'UI/UX Design' }, { name: '10 miles' }, { name: 'Full Time' }, { name: 'Clear all' }]
-  constructor() { }
+  constructor(public navCtrl: NavController) { }
 
   ngOnInit() {
   }
@@ -39,7 +40,9 @@ export class JobfilterPage implements OnInit {
     }
   }
 
-
+  applynow() {
+    this.navCtrl.navigateForward('jobslistlogin');
+  }
   selectcategory(list: any, index: any) {
     this.jobType = list.job;
     // this.vehicleModelVal = '';

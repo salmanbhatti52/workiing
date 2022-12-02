@@ -25,9 +25,9 @@ export class JobcatPage implements OnInit {
     { id: 14, name: 'General Labor' },
     { id: 15, name: 'Other' },
   ];
-  constructor(public router: Router) {}
+  constructor(public router: Router) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   optClickJobCat(opt: any) {
     console.log('optClick', opt);
@@ -36,6 +36,6 @@ export class JobcatPage implements OnInit {
   }
 
   next() {
-    this.router.navigate(['job8']);
+    this.router.navigate(['job3']);
   }
 }

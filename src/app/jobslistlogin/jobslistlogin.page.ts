@@ -21,7 +21,31 @@ export class JobslistloginPage implements OnInit {
   t3 = false
   t4 = false
   t5 = false
+
+  dropshadow = true;
+  divshow: boolean = true;
   constructor(public router: Router) { }
+
+  startnow() {
+    this.dropshadow = false;
+    this.divshow = false
+    this.router.navigate(['/basicprofile']);
+  }
+  close() {
+    this.dropshadow = false;
+    this.divshow = false
+  }
+
+  mapopen() {
+    this.router.navigate(['/jobsmaplogin']);
+  }
+
+  filterjob() {
+    this.router.navigate(['/jobfilter']);
+  }
+  gotoprofile() {
+    this.router.navigate(['/basicprofile']);
+  }
   tab1Click() {
 
     this.t1 = true

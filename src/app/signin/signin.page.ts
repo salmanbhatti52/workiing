@@ -18,10 +18,10 @@ export class SigninPage implements OnInit {
   }
 
   forgot() {
-    this.navCtrl.navigateForward('forgotpassword')
+    this.navCtrl.navigateForward('forgotpassword');
   }
   signup() {
-    this.navCtrl.navigateForward('signup')
+    this.navCtrl.navigateForward('getstarted');
   }
 
   login() {

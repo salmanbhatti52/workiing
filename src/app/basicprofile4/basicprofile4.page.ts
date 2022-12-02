@@ -18,8 +18,12 @@ export class Basicprofile4Page implements OnInit {
   back() {
     this.location.back()
   }
+
+  backto() {
+    this.navCtrl.navigateForward('addexperience');
+  }
   nextto() {
-    this.navCtrl.navigateForward('basicprofile5')
+    this.navCtrl.navigateForward('basicprofile5');
   }
 
 }

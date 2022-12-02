@@ -71,6 +71,9 @@ export class SignupPage implements OnInit {
   }
 
   gotonext() {
-    this.navCtrl.navigateRoot('jobslist')
+    this.navCtrl.navigateRoot('jobslistlogin')
+  }
+  signin() {
+    this.navCtrl.navigateRoot('signin')
   }
 }

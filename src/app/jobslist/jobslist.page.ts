@@ -26,11 +26,11 @@ export class JobslistPage implements OnInit {
   }
 
   goToSignup() {
-    this.router.navigate(['signup'])
+    this.router.navigate(['getstarted']);
   }
 
   goToProfile() {
-    this.router.navigate(['profile'])
+    // this.router.navigate(['profile'])
   }
 
   goToMap() {

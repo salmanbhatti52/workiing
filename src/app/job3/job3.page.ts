@@ -26,10 +26,39 @@ export class Job3Page implements OnInit {
   selectedoptIdAge = 0;
   selectedoptIdReply = 0;
 
+  open = false;
+  jobcategory = [{
+    job: "UI/UX Design",
+    active: false
+  }, {
+    job: "UI/UX Design",
+    active: false
+  }];
+
+  choosetype = [
+    { id: 1, name: 'Per Hour' },
+    { id: 2, name: 'Monthly' },
+  ];
+  Type: any;
   constructor(public router: Router) { }
 
   ngOnInit() { }
 
+  openlist() {
+    if (this.open == true) {
+      this.open = false;
+    } else {
+      this.open = true;
+
+    }
+
+  }
+  selecttype(list: any, index: any) {
+    this.Type = list.name;
+    // this.vehicleModelVal = '';
+    this.open = false;
+
+  }
   optClick(opt: any) {
     console.log('optClick', opt);
     this.selectedoptId = opt.id;
@@ -47,8 +76,12 @@ export class Job3Page implements OnInit {
     this.selectedoptIdReply = opt.id;
   }
 
-  next() {
+  selectcategory() {
     this.router.navigate(['jobcat']);
+  }
+
+  next() {
+    this.router.navigate(['job8']);
   }
 
 

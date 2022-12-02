@@ -2,7 +2,7 @@
   <ion-row class="center-icons" style="position: absolute; z-index: 9999; width: 100%; top: 20px">
     <ion-col size="0.3"></ion-col>
     <ion-col size="2">
-      <ion-buttons>
+      <ion-buttons (click)="goback()">
         <div style="width: 100%">
           <img src="/assets/imgs/backbtnwhite.svg" />
         </div>
@@ -19,7 +19,7 @@
       </p>
     </ion-col>
     <ion-col style="text-align: center" size="2">
-      <img src="/assets/imgs/share.svg" />
+      <img src="/assets/imgs/share.svg" (click)="goToChat()">
     </ion-col>
   </ion-row>
 
@@ -38,7 +38,8 @@
           left: 30%;
           top: -85px;
           border-radius: 50%;
-        " src="assets/imgs/profileimg.svg" />
+          width: 166px;
+        " src="assets/imgs/user.png" />
 
       <p style="color: white; margin-left: 5px">T</p>
 

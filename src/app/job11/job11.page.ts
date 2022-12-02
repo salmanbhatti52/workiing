@@ -7,10 +7,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./job11.page.scss'],
 })
 export class Job11Page implements OnInit {
-  constructor(public router: Router) {}
+  constructor(public router: Router) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
+  goback() {
+    this.router.navigate(['mypostedjob1']);
+  }
   goToJob12() {
     this.router.navigate(['job12']);
   }

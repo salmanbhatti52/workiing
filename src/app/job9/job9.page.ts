@@ -15,7 +15,9 @@ export class Job9Page implements OnInit {
 
 
 
-
+  next() {
+    this.router.navigate(['job11'])
+  }
 
 
 

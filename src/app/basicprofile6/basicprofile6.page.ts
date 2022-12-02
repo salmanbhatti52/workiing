@@ -1,6 +1,6 @@
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { ModalController, NavController } from '@ionic/angular';
 import { CompleteprofilepopupPage } from '../completeprofilepopup/completeprofilepopup.page';
 @Component({
   selector: 'app-basicprofile6',
@@ -10,13 +10,18 @@ import { CompleteprofilepopupPage } from '../completeprofilepopup/completeprofil
 export class Basicprofile6Page implements OnInit {
 
   constructor(public modal: ModalController,
-    public location: Location) { }
+    public location: Location,
+    public navCtrl: NavController) { }
 
   ngOnInit() {
   }
 
   back() {
     this.location.back()
+  }
+
+  backto() {
+    this.navCtrl.navigateForward('addeducation')
   }
   async nextto() {
     const modal = await this.modal.create({

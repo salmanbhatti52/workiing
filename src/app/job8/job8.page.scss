@@ -68,7 +68,16 @@
   color: #5463FF;
 }
 
-
+ion-range{
+	--bar-background: rgba(120, 120, 128, 0.2);
+  --bar-height: 5px;
+  --bar-border-radius: 8px;
+  --knob-background: #fff;
+  --knob-size: 40px;
+  --height: 15px;
+  --bar-background-active: #5463FF;
+  --knob-box-shadow: 0px 0.5px 4px rgba(0, 0, 0, 0.12), 0px 6px 13px rgba(0, 0, 0, 0.12);
+}
 
 .inputfield{
   background: #fff;
@@ -83,6 +92,7 @@
   font-weight: 400;
   --placeholder-color:#6A6A6A;
   --placeholder-font-weight:400;
+  font-family: 'Poppins', sans-serif;
 }
 
 p{
@@ -118,6 +128,7 @@ p{
   margin-top: 6px;
   margin-bottom: 2px;
   font-weight:400;
+  font-family: "Poppins", sans-serif;
 }
 .tbadge{
   min-width: 20px;

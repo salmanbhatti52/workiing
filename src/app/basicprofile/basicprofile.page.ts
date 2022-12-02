@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { NavController } from '@ionic/angular';
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-basicprofile',
   templateUrl: './basicprofile.page.html',
@@ -19,9 +20,14 @@ export class BasicprofilePage implements OnInit {
   showflags = true;
   constructor(public route: ActivatedRoute,
     public http: HttpClient,
+    public location: Location,
     public navCtrl: NavController) { }
 
   ngOnInit() {
+  }
+
+  goback() {
+    this.location.back()
   }
   openfflaglist() {
     if (this.upicon == false) {

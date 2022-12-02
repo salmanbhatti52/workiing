@@ -10,14 +10,12 @@
         </ion-buttons>
       </ion-col>
       <ion-col size="7.5" style="text-align: center">
-        <p
-          style="
+        <p style="
             color: #03045e;
             font-family: 'Poppins', sans-serif;
             font-size: 20px;
             font-weight: 700;
-          "
-        >
+          ">
           Job Category
         </p>
       </ion-col>
@@ -29,30 +27,16 @@
 <ion-content>
   <div>
     <div style="margin: 25px 0px; display: flex; flex-wrap: wrap">
-      <div
-        (click)="optClickJobCat(opt)"
-        [class.divcheck]="selectedJobCatID == opt.id"
-        [class.divuncheck]="selectedJobCatID != opt.id"
-        *ngFor="let opt of jobCatArr"
-      >
+      <div (click)="optClickJobCat(opt)" [class.divcheck]="selectedJobCatID == opt.id"
+        [class.divuncheck]="selectedJobCatID != opt.id" *ngFor="let opt of jobCatArr">
         <ion-label>{{opt.name}}</ion-label>
-        <img
-          *ngIf="selectedJobCatID == opt.id"
-          class="imgsize"
-          src="assets/imgs/checkwhite.svg"
-        />
-        <img
-          *ngIf="selectedJobCatID != opt.id"
-          class="imgsize"
-          src="assets/imgs/checkgray.svg"
-        />
+        <img *ngIf="selectedJobCatID == opt.id" class="imgsize" src="assets/imgs/checkwhite.svg" />
+        <img *ngIf="selectedJobCatID != opt.id" class="imgsize" src="assets/imgs/checkgray.svg" />
       </div>
     </div>
 
     <div style="width: 90%; margin: 0px auto 30px auto">
-      <ion-button
-        (click)="next()"
-        style="
+      <ion-button (click)="next()" style="
           --background: #03045e;
           font-style: normal;
           font-weight: 500;
@@ -64,8 +48,8 @@
           height: 54px;
           --border-radius: 12px;
           text-transform: capitalize;
-        "
-      >
+          font-family: 'Poppins', sans-serif;
+        ">
         Save
       </ion-button>
     </div>

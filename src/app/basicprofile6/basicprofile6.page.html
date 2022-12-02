@@ -64,7 +64,8 @@
     <div class="lbl">All Star</div>
 
     <div style="text-align: center;">
-      <img src="/assets/imgs/profileimg.svg">
+      <img src="/assets/imgs/user.png" style="    width: 152px;
+      border-radius: 90%;">
       <div class="text">Upload Profile Picture</div>
     </div>
 
@@ -90,10 +91,10 @@
 
     <div style="width: 80%;
     margin: 15% auto;">
-      <ion-button class="c-btn" (click)="nextto()">Add more Education<span style="margin-left: 5px;
+      <ion-button class="c-btn" (click)="backto()">Add more Education<span style="margin-left: 5px;
         margin-top: 5px;"><img src="assets/imgs/bluearrow.svg"></span></ion-button>
-      <ion-button class="c-btn1">Save & Preview<span style="margin-left: 5px;
-          margin-top: 5px;"><img src="assets/imgs/gray-rightarrow.svg"></span></ion-button>
+      <ion-button class="c-btn1" (click)="nextto()">Save & Preview<span style="margin-left: 5px;
+          margin-top: 5px;"><img src="assets/imgs/arrow-right.svg"></span></ion-button>
     </div>
   </div>
 </ion-content>

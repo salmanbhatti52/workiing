@@ -21,12 +21,12 @@
 </ion-header>
 <ion-content>
   <div class="wrapper">
-    <div class="text">Contunue as a...</div>
+    <div class="text">Continue as a...</div>
     <div *ngFor="let job of jobtype;let i=index;" (click)="selectsumassured(job,i)"
       style="text-align: -webkit-center; margin-top:5%;">
-      <div  style=" height: 140px;
+      <div style=" height: 140px;
       width: 140px; position: relative;">
-        <img  style="height: 140px;
+        <img style="height: 140px;
         width: 140px;" src="{{job.img}}" class="imgcls" [class.activeproduct]="job.status==true">
 
         <img src="assets/imgs/blue-circle.svg" style="position: absolute;

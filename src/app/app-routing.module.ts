@@ -238,7 +238,11 @@ const routes: Routes = [
   {
     path: 'deleteaccount',
     loadChildren: () => import('./deleteaccount/deleteaccount.module').then(m => m.DeleteaccountPageModule)
+  },  {
+    path: 'popupaftersignup',
+    loadChildren: () => import('./popupaftersignup/popupaftersignup.module').then( m => m.PopupaftersignupPageModule)
   },
+
 
 ];
 

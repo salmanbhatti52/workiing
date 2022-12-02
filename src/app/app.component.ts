@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { SplashScreen } from '@capacitor/splash-screen';
+import { Platform } from '@ionic/angular';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -24,5 +26,15 @@ export class AppComponent {
     { title: 'FAQ’s', url: '/faq', icon: 'menufaq.svg' },
     { title: 'Logout', url: '/signin', icon: 'menulogout.svg' },
   ];
-  constructor() { }
+  constructor(public platform: Platform) { }
+
+  ngOnInit() {
+
+    this.platform.ready().then(() => {
+      setTimeout(() => {
+
+        SplashScreen.hide();
+      }, 4000);
+    });
+  }
 }

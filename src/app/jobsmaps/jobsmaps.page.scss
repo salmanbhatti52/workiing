@@ -34,6 +34,8 @@ capacitor-google-map {
   height: 54px;
   width: 165px;
   --border-radius: 12px;
+  text-transform: capitalize;
+  font-family: 'Poppins', sans-serif;
 
 }
 .btn2{
@@ -45,7 +47,10 @@ capacitor-google-map {
   color: #03045E;
   --border-width: 2px;
   --border-style: solid;
+  text-transform: capitalize;
+  font-family: 'Poppins', sans-serif;
 }
+
 .para{
   font-size: 16px;
   font-weight: 400;

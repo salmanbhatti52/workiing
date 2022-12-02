@@ -34,30 +34,42 @@
       <p class="title1">Job Type</p>
 
       <div class="inputfield">
-        <ion-input class="input" type="email" placeholder="Compny Website"><img style="margin: 15px 7px 14px 15px"
-            src="/assets/imgs/browser.svg" />
+        <ion-input class="input" type="email" placeholder="Job Category" readonly (click)="selectcategory()"><img
+            style="margin: 15px 7px 14px 15px" src="/assets/imgs/grid.svg">
         </ion-input>
       </div>
+      <div style="display:flex;margin-left: 1%;">
+        <img src="/assets/imgs/dollar.svg">
+        <p style="margin-left:4%;">Salary ($) <span style="color:#C1C1C1;">(Optional)</span> </p>
+      </div>
 
-      <p>Tips/Comission</p>
 
       <div style="display: flex">
-        <div class="inputfield">
-          <ion-input style="padding: 5px 10px !important" class="input" type="text" placeholder="From">
+        <div class="inputfield" style="height: 55px;">
+          <ion-input style="padding: 5px 10px !important;" class="input" type="text" placeholder="From">
           </ion-input>
         </div>
 
-        <div class="inputfield" style="margin-left: 20px">
-          <ion-input style="padding: 5px 10px !important" class="input" type="email" placeholder="For">
+        <div class="inputfield" style="margin-left: 20px;height: 55px;">
+          <ion-input style="padding: 5px 10px !important" class="input" type="text" placeholder="For">
           </ion-input>
         </div>
 
-        <div class="inputfield" style="margin-left: 20px">
-          <ion-input style="padding: 5px 10px !important" class="input" type="email" placeholder="Per Hour">
+        <div class="inputfield" style="margin-left: 20px;padding-bottom: 5px">
+          <ion-input style="padding: 5px 10px !important" class="input" type="text" placeholder="Per Hour"
+            (click)="openlist()" readonly [(ngModel)]="Type">
           </ion-input>
+          <div *ngIf="open==true" style="height:auto ; overflow: scroll;">
+            <div *ngFor="let list of choosetype; let i=index" (click)="selecttype(list,i)">
+              <div class="euro-text1">{{list.name}}</div>
+            </div>
+
+          </div>
         </div>
       </div>
+
     </div>
+
 
     <p style="margin-left: 20px">Tips/Comission</p>
 
@@ -110,6 +122,7 @@
           height: 54px;
           --border-radius: 12px;
           text-transform: capitalize;
+          font-family: 'Poppins', sans-serif;
         ">
         Save & Next
       </ion-button>

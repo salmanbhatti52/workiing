@@ -22,7 +22,7 @@ export class ResetpasswordPage implements OnInit {
   }
 
   reset() {
-    this.navCtrl.navigateForward('getstarted')
+    this.navCtrl.navigateForward('signin');
   }
 
 }

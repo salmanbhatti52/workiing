@@ -1,4 +1,6 @@
+import { Location } from '@angular/common';
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-profile-preview',
@@ -8,11 +10,17 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 export class ProfilePreviewPage implements OnInit {
   @ViewChild('mySegment', { read: ElementRef }) private mySegment!: ElementRef;
   requestsType: any;
-  constructor() { }
+  constructor(public navCtrl: NavController) { }
 
   ngOnInit() {
   }
+  goback() {
+    this.navCtrl.navigateForward('jobslistlogin')
+  }
 
+  goToChat() {
+    this.navCtrl.navigateForward('inbox')
+  }
   ionViewWillEnter() {
     if (this.requestsType) {
       if (this.requestsType === 'experience') {
