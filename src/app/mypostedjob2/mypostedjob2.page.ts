@@ -13,6 +13,9 @@ export class Mypostedjob2Page implements OnInit {
 
   ngOnInit() { }
 
+  editjob() {
+    this.router.navigate(['job1']);
+  }
   back() {
     this.location.back()
   }
