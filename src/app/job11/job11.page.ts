@@ -14,6 +14,10 @@ export class Job11Page implements OnInit {
   goback() {
     this.router.navigate(['mypostedjob1']);
   }
+
+  edit() {
+    this.router.navigate(['job1']);
+  }
   goToJob12() {
     this.router.navigate(['job12']);
   }

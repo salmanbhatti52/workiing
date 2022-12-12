@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { JobsmaploginPageRoutingModule } from './jobsmaplogin-routing.module';
 
 import { JobsmaploginPage } from './jobsmaplogin.page';
-
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +15,7 @@ import { JobsmaploginPage } from './jobsmaplogin.page';
     IonicModule,
     JobsmaploginPageRoutingModule
   ],
-  declarations: [JobsmaploginPage]
+  declarations: [JobsmaploginPage],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class JobsmaploginPageModule {}
+export class JobsmaploginPageModule { }

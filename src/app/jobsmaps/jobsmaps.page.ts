@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { GoogleMap, Marker } from '@capacitor/google-maps';
 import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
+import { MenuController, NavController } from '@ionic/angular';
 @Component({
   selector: 'app-jobsmaps',
   templateUrl: './jobsmaps.page.html',
@@ -25,13 +27,27 @@ export class JobsmapsPage implements OnInit {
     }
   ]
 
-  constructor(public router: Router) { }
+  constructor(public router: Router,
+    public location: Location,
+    public navCtrl: NavController,
+    public menuCtrl: MenuController) { }
 
   ngOnInit() {
   }
 
   ionViewDidEnter() {
-    this.createMap()
+    this.createMap();
+    this.menuCtrl.enable(false);
+  }
+
+  ionViewWillLeave() {
+    // enable the root left menu when leaving this page
+    this.menuCtrl.enable(true);
+    this.map.destroy();
+  }
+
+  back() {
+    this.location.back()
   }
 
   async createMap() {
@@ -95,10 +111,10 @@ export class JobsmapsPage implements OnInit {
     })
   }
   goToLogin() {
-    this.router.navigate(['signin'])
+    this.navCtrl.navigateForward(['signin'])
   }
 
   goToSignup() {
-    this.router.navigate(['getstarted']);
+    this.navCtrl.navigateForward(['getstarted']);
   }
 }

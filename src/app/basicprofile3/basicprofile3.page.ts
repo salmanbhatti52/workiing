@@ -23,4 +23,7 @@ export class Basicprofile3Page implements OnInit {
     this.navCtrl.navigateForward('addexperience');
   }
 
+  save() {
+    this.navCtrl.navigateForward('basicprofile4');
+  }
 }

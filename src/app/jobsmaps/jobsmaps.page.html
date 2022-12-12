@@ -3,13 +3,13 @@
     <ion-row class="center-icons">
       <ion-col size="0.3"></ion-col>
       <ion-col size="2">
-        <ion-menu-toggle>
-          <ion-buttons>
-            <div style="width:100%;">
-              <img src="/assets/imgs/menu.svg">
-            </div>
-          </ion-buttons>
-        </ion-menu-toggle>
+
+        <ion-buttons (click)="back()">
+          <div style="width:100%;">
+            <img src="/assets/imgs/backbtn.svg">
+          </div>
+        </ion-buttons>
+
       </ion-col>
       <ion-col size="7.5">
         <img src="/assets/imgs/working2.svg" style="
@@ -39,9 +39,9 @@
 </ion-header>
 
 <ion-content>
-  <div style="height:100%">
-    <capacitor-google-map #map></capacitor-google-map>
-  </div>
+
+  <!-- <capacitor-google-map #map></capacitor-google-map> -->
+  <img src="assets/imgs/map.svg" style="width: 100%;height: 100%;">
 
   <div class="footercls">
     <div style="text-align: center;">

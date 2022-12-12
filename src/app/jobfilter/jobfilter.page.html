@@ -42,6 +42,7 @@
           </div>
         </div>
 
+        <div class="label">Availability</div>
         <div style="margin-top: 20px; display: flex">
           <div (click)="optClickReply(opt)" [class.divcheck]="selectedoptIdReply == opt.id"
             [class.divuncheck]="selectedoptIdReply != opt.id" *ngFor="let opt of optionArr">
@@ -55,7 +56,7 @@
           <div class="box" *ngFor="let fav of choosearray;let i = index;">
 
             <ion-chip class="chip">
-              <ion-label class="label">{{fav.name}}</ion-label>
+              <ion-label class="label1">{{fav.name}}</ion-label>
               <img src="assets/imgs/icons/xmark.svg" class="chipimg">
             </ion-chip>
           </div>

@@ -19,6 +19,9 @@ export class Basicprofile5Page implements OnInit {
   back() {
     this.location.back()
   }
+  save() {
+    this.navCtrl.navigateForward('basicprofile6')
+  }
   nextto() {
     this.navCtrl.navigateForward('addeducation')
   }

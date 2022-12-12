@@ -20,8 +20,8 @@ export class JobfilterPage implements OnInit {
     active: false
   }];
   optionArr = [
-    { id: 1, name: 'Yes' },
-    { id: 2, name: 'No' },
+    { id: 1, name: 'Full Time' },
+    { id: 2, name: 'Part Time' },
   ];
   selectedoptIdReply = 0;
   distance = [{ miles: '10 miles', active: false }]

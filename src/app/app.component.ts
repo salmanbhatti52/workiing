@@ -8,6 +8,7 @@ import { Platform } from '@ionic/angular';
 })
 export class AppComponent {
   public appPages = [
+    { title: 'Home', url: '/jobslistlogin', icon: 'icon-user.svg' },
     { title: 'My Posted Jobs', url: '/mypostedjob1', icon: 'menujob.svg' },
     {
       title: 'Account Settings',
