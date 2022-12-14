@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -13,10 +14,14 @@ export class Job8Page implements OnInit {
     { id: 2, name: 'No' },
   ];
 
-  constructor(public router: Router) { }
+  constructor(public router: Router,
+    public location: Location) { }
 
   ngOnInit() { }
 
+  back() {
+    this.location.back()
+  }
   optClick(opt: any) {
     console.log('optClick', opt);
     this.selectedoptId = opt.id;

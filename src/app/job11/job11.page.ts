@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -7,12 +8,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./job11.page.scss'],
 })
 export class Job11Page implements OnInit {
-  constructor(public router: Router) { }
+  constructor(public router: Router,
+    public location: Location) { }
 
   ngOnInit() { }
 
   goback() {
     this.router.navigate(['mypostedjob1']);
+    // this.location.back()
   }
 
   edit() {

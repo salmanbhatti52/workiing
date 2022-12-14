@@ -23,6 +23,9 @@ export class JobslistPage implements OnInit {
   ngOnInit() {
   }
 
+  gotoback() {
+    this.router.navigate(['signin']);
+  }
   ionViewDidEnter() {
     this.menuCtrl.enable(false);
   }

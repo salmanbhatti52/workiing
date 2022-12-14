@@ -1,7 +1,9 @@
+import { LoadingService } from './../services/loading.service';
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 // import { GoogleAuth } from '@codetrix-studio/capacitor-google-auth';
 import { isPlatform } from '@ionic/angular';
+import { RestService } from '../services/rest.service';
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.page.html',
@@ -9,7 +11,11 @@ import { isPlatform } from '@ionic/angular';
 })
 export class SigninPage implements OnInit {
   showPass = false;
-  constructor(public navCtrl: NavController) { }
+  email: any;
+  password: any;
+  constructor(public navCtrl: NavController,
+    public rest: RestService,
+    public extra: LoadingService) { }
 
   ngOnInit() {
     // if (!isPlatform('capacitor')) {
@@ -38,9 +44,31 @@ export class SigninPage implements OnInit {
   }
 
   login() {
-    this.navCtrl.navigateRoot([
-      '/jobslistlogin',
-    ]);
+    this.extra.loadershow()
+    let datasend = {
+      "email": this.email,
+      "password": this.password,
+    }
+    this.rest.sendRequest('signin', datasend).subscribe((res: any) => {
+      console.log('response--', res);
+      this.extra.hideLoader();
+      if (res.status == 'success') {
+        localStorage.setItem("userdata", JSON.stringify(res.data));
+        localStorage.setItem('users_customers_id', res.data.users_customers_id)
+        this.navCtrl.navigateRoot([
+          '/jobslistlogin',
+        ]);
+      } else {
+
+        this.extra.presentToast(res.message)
+      }
+
+    }, err => {
+      console.log(err);
+
+      this.extra.hideLoader();
+    })
+
 
   }
 }

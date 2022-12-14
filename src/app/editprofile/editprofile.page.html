@@ -31,12 +31,12 @@
 <ion-content>
   <div class="wrapper">
     <div style="width:100%;text-align:center;position: relative;">
-      <img src="/assets/imgs/user.png" style="width:152px;border-radius:90px;">
+      <img src="/assets/imgs/profile.png" style="width:152px;height:152px; border-radius:90px;">
       <img src="/assets/imgs/editicon.svg" style="position: absolute;
       top: 70%;
       left: 63%;">
     </div>
-    <ion-segment value="General" id="segment" (ionChange)="segmentChanged($event)" #mySegment>
+    <ion-segment value="General" id="segment" (ionChange)="segmentChanged($event)" #mySegment style="margin-top: 3%;">
       <ion-segment-button value="General">
         <ion-label>General</ion-label>
       </ion-segment-button>

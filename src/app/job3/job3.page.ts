@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -40,10 +41,14 @@ export class Job3Page implements OnInit {
     { id: 2, name: 'Monthly' },
   ];
   Type: any;
-  constructor(public router: Router) { }
+  constructor(public router: Router,
+    public location: Location) { }
 
   ngOnInit() { }
 
+  back() {
+    this.location.back()
+  }
   openlist() {
     if (this.open == true) {
       this.open = false;

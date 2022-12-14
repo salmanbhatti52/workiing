@@ -3,56 +3,38 @@
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
         <div style="margin-right: 6%; text-align: right">
-          <ion-menu-toggle
-            ><img src="assets/menuicons/menucross.svg"
-          /></ion-menu-toggle>
+          <ion-menu-toggle><img src="assets/menuicons/menucross.svg" /></ion-menu-toggle>
         </div>
 
         <ion-list style="width: 78%; margin: 0px auto" id="inbox-list">
           <ion-row style="margin-bottom: 25px">
             <ion-col style="text-align: center">
-              <img
-                style="width: 80px; height: 80px; border-radius: 50%"
-                src="assets/imgs/joblogo.svg"
-              />
-              <p
-                style="
+              <img style="width: 80px; height: 80px; border-radius: 50%" src="assets/imgs/joblogo.svg" />
+              <p style="
                   font-family: 'Poppins', sans-serif;
                   font-style: normal;
                   font-weight: 500;
                   font-size: 30px;
                   line-height: 30px;
                   color: #1a1d1e;
-                "
-              >
+                ">
                 Adom Shafi
               </p>
-              <p
-                style="
+              <p style="
                   font-family: 'Poppins', sans-serif;
                   font-style: normal;
                   font-weight: 400;
                   font-size: 14px;
                   line-height: 14px;
                   color: #6a6a6a;
-                "
-              >
+                ">
                 hellobesnik@gmail.com
               </p>
             </ion-col>
           </ion-row>
-          <ion-menu-toggle
-            auto-hide="false"
-            *ngFor="let p of appPages; let i = index"
-          >
-            <ion-item
-              [class.topmarginclass]="p.title == 'Logout'"
-              routerDirection="root"
-              [routerLink]="[p.url]"
-              lines="none"
-              detail="false"
-              routerLinkActive="selected"
-            >
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index" (click)="pages(p)">
+            <ion-item [class.topmarginclass]="p.title == 'Logout'" routerDirection="root" [routerLink]="[p.url]"
+              lines="none" detail="false" routerLinkActive="selected">
               <img src="assets/menuicons/{{ p.icon }}" />
 
               <ion-label class="labelclass">{{ p.title }}</ion-label>

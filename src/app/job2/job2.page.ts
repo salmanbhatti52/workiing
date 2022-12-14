@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
@@ -9,10 +10,15 @@ import { Job4Page } from '../job4/job4.page';
 })
 export class Job2Page implements OnInit {
   otp: any;
-  constructor(public modal: ModalController, public router: Router) { }
+  constructor(public modal: ModalController,
+    public router: Router,
+    public location: Location) { }
 
   ngOnInit() { }
 
+  back() {
+    this.location.back()
+  }
   onOtpChange(event: any) {
     console.log(event, 'eventevent');
     this.otp = event;

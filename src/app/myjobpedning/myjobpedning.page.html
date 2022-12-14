@@ -18,58 +18,51 @@
 </ion-header>
 
 <ion-content>
-  <div style="width: 90%; margin: 0px auto">
-    <div
-      *ngFor="let item of arraytest"
-      style="
+  <div style="width: 90%; margin: 0px auto;font-family: 'Poppins', sans-serif;">
+    <div *ngFor="let item of arraytest" style="
         background: #ffffff;
         border: 1px solid #ededed;
         box-shadow: 0px 0px 35px -10px rgb(0 0 0 / 10%);
         border-radius: 12px;
         margin-bottom: 10px;
-        padding: 10px;
-      "
-    >
+        padding: 10px 10px 5px 10px;
+      ">
       <div style="display: flex; align-items: center">
-        <img
-          style="margin-right: 20px; height: 70px; width: 70px"
-          src="{{item.image}}"
-        />
+        <img style="margin-right: 20px; height: 70px; width: 70px" src="{{item.image}}" />
         <div>
-          <p style="font-family: 'Poppins', sans-serif; font-weight: 600">
+          <p style="font-family: 'Poppins', sans-serif; font-weight: 500;font-size: 14px;">
             {{item.name}}
           </p>
-          <div style="display: flex; margin-top: 0px; margin-left: 0px">
+          <div style="display: flex; margin-top:3px; margin-left: 0px">
             <img src="assets/imgs/pinblack.svg" />
-            <p
-              style="
-                color: gray;
+            <p style="
+                color: #6A6A6A;
                 font-family: 'Poppins', sans-serif;
                 margin-left: 10px;
-              "
-            >
+                font-size: 12px;
+              ">
               {{item.arealocation}}
             </p>
           </div>
 
-          <div style="display: flex">
-            <p style="color: gray; font-family: 'Poppins', sans-serif">
+          <div style="display: flex;margin-top: 3px;">
+            <p style="color: #6A6A6A; font-family: 'Poppins', sans-serif;font-size: 12px;">
               W. Experience
             </p>
-            <p
-              style="
+            <p style="
                 margin-left: 10px;
                 font-family: 'Poppins', sans-serif;
-                font-weight: 600;
-              "
-            >
+                font-weight: 500;
+                font-size: 12px;
+                color: #000000;
+              ">
               {{item.experence}}
             </p>
           </div>
         </div>
       </div>
 
-      <ion-row style="margin-top: 10px">
+      <ion-row style="margin-top: 15px">
         <ion-col size="5">
           <ion-badge class="badgeclass">{{item.workplace}}</ion-badge>
         </ion-col>

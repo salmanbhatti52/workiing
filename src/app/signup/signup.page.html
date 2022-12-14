@@ -20,21 +20,21 @@
 </ion-header>
 <ion-content>
   <div class="wrapper">
-    <div class="text">Sign Up as {{gettypename}}</div>
+    <div class="text">Sign Up as {{usertype}}</div>
     <div class="text1">Just one click away..!</div>
     <p class="para">Fisnishing sign up to apply to jobs</p>
 
     <div class="inputfield">
-      <ion-input class="input" type="text" placeholder="User Name"><img style="margin:15px 7px 14px 15px;"
-          src="/assets/imgs/user.svg"> </ion-input>
+      <ion-input class="input" type="text" placeholder="User Name" [(ngModel)]="firstname"><img
+          style="margin:15px 7px 14px 15px;" src="/assets/imgs/user.svg"> </ion-input>
     </div>
     <div class="inputfield">
-      <ion-input class="input" type="text" placeholder="Last Name"><img style="margin:15px 7px 14px 15px;"
-          src="/assets/imgs/user.svg"> </ion-input>
+      <ion-input class="input" type="text" placeholder="Last Name" [(ngModel)]="lastname"><img
+          style="margin:15px 7px 14px 15px;" src="/assets/imgs/user.svg"> </ion-input>
     </div>
     <div class="inputfield">
-      <ion-input class="input" type="email" placeholder="Email Address"><img style="margin:15px 7px 14px 15px;"
-          src="/assets/imgs/message.svg"> </ion-input>
+      <ion-input class="input" type="email" placeholder="Email Address" [(ngModel)]="email"><img
+          style="margin:15px 7px 14px 15px;" src="/assets/imgs/message.svg"> </ion-input>
     </div>
     <div class="inputfield">
       <div style="display: flex;
@@ -50,7 +50,7 @@
           <img src="/assets/imgs/angle-up.svg" *ngIf="upicon==true" style="width: 14px;
           height: 21px;">
         </div>
-        <ion-input class="input" type="tel" placeholder="Phone Number">
+        <ion-input class="input" type="tel" placeholder="Phone Number" [(ngModel)]="phonenumber">
 
         </ion-input>
       </div>
@@ -75,8 +75,8 @@
     <!-- flag list shown -->
 
     <div class="inputfield">
-      <ion-input class="input" type="{{showPass ? 'text':'password' }}" placeholder="Password"><img
-          style="margin:15px 7px 14px 15px;" src="/assets/imgs/lock-icon.svg"> </ion-input>
+      <ion-input class="input" type="{{showPass ? 'text':'password' }}" placeholder="Password"
+        [(ngModel)]="password"><img style="margin:15px 7px 14px 15px;" src="/assets/imgs/lock-icon.svg"> </ion-input>
       <div class="icondiv" style="margin-top: 4px;">
         <ion-icon style="color:#6A6A6A ; margin-right: 15px;" name="eye" *ngIf="!showPass" (click)="togglePass()">
         </ion-icon>

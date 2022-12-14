@@ -12,6 +12,7 @@ export class Job4Page implements OnInit {
 
   ngOnInit() {
   }
+
   dismiss() {
     this.modal.dismiss().then(data => {
       // this.navCtrl.navigateForward('otp');

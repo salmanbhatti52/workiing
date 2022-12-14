@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SplashScreen } from '@capacitor/splash-screen';
-import { Platform } from '@ionic/angular';
+import { NavController, Platform } from '@ionic/angular';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -27,7 +27,16 @@ export class AppComponent {
     { title: 'FAQ’s', url: '/faq', icon: 'menufaq.svg' },
     { title: 'Logout', url: '/signin', icon: 'menulogout.svg' },
   ];
-  constructor(public platform: Platform) { }
+  constructor(public platform: Platform,
+    public navCtrl: NavController) {
+    console.log('users_customers_id', localStorage.getItem('users_customers_id'));
+
+    // if (localStorage.getItem('users_customers_id') == null) {
+    //   this.navCtrl.navigateRoot('signin')
+    // } else {
+    //   this.navCtrl.navigateRoot('jobslistlogin')
+    // }
+  }
 
   ngOnInit() {
 
@@ -37,5 +46,12 @@ export class AppComponent {
         SplashScreen.hide();
       }, 4000);
     });
+  }
+
+  pages(p: any) {
+    console.log(p);
+    if (p.title == 'Logout') {
+      localStorage.removeItem('users_customers_id');
+    }
   }
 }

@@ -24,16 +24,34 @@ export class JobslistloginPage implements OnInit {
 
   dropshadow = true;
   divshow: boolean = true;
-  constructor(public router: Router) { }
+  userdetail: any;
+  userstatus: any;
+  usss: any;
+  constructor(public router: Router) {
+    this.usss = localStorage.getItem('userdata');
+    this.userdetail = JSON.parse(this.usss);
+    console.log(this.userdetail);
+
+    this.userstatus = this.userdetail.status
+    console.log(this.userstatus);
+
+    if (localStorage.getItem('dropshadow') == 'false') {
+      this.dropshadow = false;
+      this.divshow = false
+    }
+  }
 
   startnow() {
     this.dropshadow = false;
     this.divshow = false
     this.router.navigate(['/basicprofile']);
+    localStorage.setItem('dropshadow', 'false');
   }
   close() {
     this.dropshadow = false;
-    this.divshow = false
+    this.divshow = false;
+    localStorage.setItem('dropshadow', 'false');
+
   }
 
   mapopen() {
