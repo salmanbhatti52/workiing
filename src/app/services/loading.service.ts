@@ -4,6 +4,8 @@ import { ToastController, LoadingController } from '@ionic/angular';
   providedIn: 'root'
 })
 export class LoadingService {
+  email: any;
+  name: any;
   toast: any;
   constructor(private toastCtrl: ToastController,
     public loadingCtrl: LoadingController) { }

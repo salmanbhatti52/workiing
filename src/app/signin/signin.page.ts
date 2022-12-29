@@ -53,6 +53,8 @@ export class SigninPage implements OnInit {
       console.log('response--', res);
       this.extra.hideLoader();
       if (res.status == 'success') {
+        this.extra.email = res.data.email
+        this.extra.name = res.data.first_name + res.data.last_name
         localStorage.setItem("userdata", JSON.stringify(res.data));
         localStorage.setItem('users_customers_id', res.data.users_customers_id)
         this.navCtrl.navigateRoot([

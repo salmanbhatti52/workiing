@@ -29,8 +29,7 @@
       <img src="assets/imgs/review.svg" />
     </div>
 
-    <p
-      style="
+    <p style="
         font-family: 'Poppins', sans-serif;
         font-style: normal;
         font-weight: 700;
@@ -38,86 +37,35 @@
         line-height: 36px;
         color: #1a1d1e;
         text-align: center;
-      "
-    >
+      ">
       Please Rate our App
     </p>
 
     <div style="margin: 40px auto; text-align: center">
-      <img
-        style="margin-right: 11px"
-        src="assets/icon/not_lighted_star.svg"
-        alt=""
-        *ngIf="rateStar1==false;"
-        (click)="rateStar(1)"
-      />
-      <img
-        style="margin-right: 11px"
-        src="assets/icon/lighted_star.svg"
-        alt=""
-        *ngIf="rateStar1==true;"
-        (click)="rateStar(1)"
-      />
-      <img
-        style="margin-right: 11px"
-        src="assets/icon/not_lighted_star.svg"
-        alt=""
-        *ngIf="rateStar2==false;"
-        (click)="rateStar(2)"
-      />
-      <img
-        style="margin-right: 11px"
-        src="assets/icon/lighted_star.svg"
-        alt=""
-        *ngIf="rateStar2==true;"
-        (click)="rateStar(2)"
-      />
-      <img
-        style="margin-right: 11px"
-        src="assets/icon/not_lighted_star.svg"
-        alt=""
-        *ngIf="rateStar3==false;"
-        (click)="rateStar(3)"
-      />
-      <img
-        style="margin-right: 11px"
-        src="assets/icon/lighted_star.svg"
-        alt=""
-        *ngIf="rateStar3==true;"
-        (click)="rateStar(3)"
-      />
-      <img
-        style="margin-right: 11px"
-        src="assets/icon/not_lighted_star.svg"
-        alt=""
-        *ngIf="rateStar4==false;"
-        (click)="rateStar(4)"
-      />
-      <img
-        style="margin-right: 11px"
-        src="assets/icon/lighted_star.svg"
-        alt=""
-        *ngIf="rateStar4==true;"
-        (click)="rateStar(4)"
-      />
-      <img
-        style="margin-right: 11px"
-        src="assets/icon/not_lighted_star.svg"
-        alt=""
-        *ngIf="rateStar5==false;"
-        (click)="rateStar(5)"
-      />
-      <img
-        style="margin-right: 11px"
-        src="assets/icon/lighted_star.svg"
-        alt=""
-        *ngIf="rateStar5==true;"
-        (click)="rateStar(5)"
-      />
+      <img style="margin-right: 11px" src="assets/icon/not_lighted_star.svg" alt="" *ngIf="rateStar1==false;"
+        (click)="rateStar(1)" />
+      <img style="margin-right: 11px" src="assets/icon/lighted_star.svg" alt="" *ngIf="rateStar1==true;"
+        (click)="rateStar(1)" />
+      <img style="margin-right: 11px" src="assets/icon/not_lighted_star.svg" alt="" *ngIf="rateStar2==false;"
+        (click)="rateStar(2)" />
+      <img style="margin-right: 11px" src="assets/icon/lighted_star.svg" alt="" *ngIf="rateStar2==true;"
+        (click)="rateStar(2)" />
+      <img style="margin-right: 11px" src="assets/icon/not_lighted_star.svg" alt="" *ngIf="rateStar3==false;"
+        (click)="rateStar(3)" />
+      <img style="margin-right: 11px" src="assets/icon/lighted_star.svg" alt="" *ngIf="rateStar3==true;"
+        (click)="rateStar(3)" />
+      <img style="margin-right: 11px" src="assets/icon/not_lighted_star.svg" alt="" *ngIf="rateStar4==false;"
+        (click)="rateStar(4)" />
+      <img style="margin-right: 11px" src="assets/icon/lighted_star.svg" alt="" *ngIf="rateStar4==true;"
+        (click)="rateStar(4)" />
+      <img style="margin-right: 11px" src="assets/icon/not_lighted_star.svg" alt="" *ngIf="rateStar5==false;"
+        (click)="rateStar(5)" />
+      <img style="margin-right: 11px" src="assets/icon/lighted_star.svg" alt="" *ngIf="rateStar5==true;"
+        (click)="rateStar(5)" />
     </div>
 
     <div style="margin-top: 20px; text-align: center">
-      <ion-button class="btn1" (click)="gotoreview2()">Submit</ion-button>
+      <ion-button class="btn1">Submit</ion-button>
     </div>
   </div>
 </ion-content>

@@ -10,22 +10,26 @@ import { MenuController, NavController } from '@ionic/angular';
   styleUrls: ['./jobsmaps.page.scss'],
 })
 export class JobsmapsPage implements OnInit {
-  @ViewChild('map') mapRef: any = ElementRef;
-  map: any = GoogleMap;
+  title: any;
+  test: any;
   markerscheck = [
     {
       coordinate: {
-        lat: 30.1575,
-        lng: 71.5249,
-      }
+        lat: 30.2179,
+        lng: 71.4856,
+      },
+      title: 'hellow'
     },
     {
       coordinate: {
         lat: 31.5204,
         lng: 74.3587,
-      }
+      },
+      title: 'hellowworl'
     }
   ]
+  @ViewChild('map') mapRef: any = ElementRef;
+  map: any = GoogleMap;
 
   constructor(public router: Router,
     public location: Location,
@@ -33,6 +37,7 @@ export class JobsmapsPage implements OnInit {
     public menuCtrl: MenuController) { }
 
   ngOnInit() {
+    // this.test = "<h1>Hello<h1><h2>Mr<h2>";
   }
 
   ionViewDidEnter() {
@@ -51,11 +56,12 @@ export class JobsmapsPage implements OnInit {
   }
 
   async createMap() {
-    // AIzaSyAncWVozZi9mUrnaxdDJJE_rgRY5M-wD54
+    // AIzaSyAncWVozZi9mUrnaxdDJJE_rgRY5M-wD54;
+    // 'AIzaSyA7ks8X2YnLcxTuEC3qydL2adzA0NYbl6c Ali key is not for build//
     this.map = await GoogleMap.create({
       id: 'my-map', // Unique identifier for this map instance
       element: this.mapRef?.nativeElement, // reference to the capacitor-google-map element
-      apiKey: 'AIzaSyAncWVozZi9mUrnaxdDJJE_rgRY5M-wD54', // Your Google Maps API Key
+      apiKey: 'AIzaSyA7ks8X2YnLcxTuEC3qydL2adzA0NYbl6c', // Your Google Maps API Key
       forceCreate: true,
       config: {
         center: {
@@ -100,15 +106,17 @@ export class JobsmapsPage implements OnInit {
     //   }
 
     // ];
-    await this.map.addMarkers(this.markerscheck);
-    this.map.setOnMarkerClickListener(async (marker: any) => {
+    await this.map.addMarkers(this.markerscheck)
+    this.map.setOnMarkerClickListener(async (marker?: any) => {
       console.log(marker);
-
+      // this.title = marker.title;
+      this.test = "<h1>" + marker.title + "<h1>";
     })
     this.map.setOnInfoWindowClickListener(async (marker: any) => {
       console.log('info', marker);
 
     })
+
   }
   goToLogin() {
     this.navCtrl.navigateForward(['signin'])
@@ -116,5 +124,9 @@ export class JobsmapsPage implements OnInit {
 
   goToSignup() {
     this.navCtrl.navigateForward(['getstarted']);
+  }
+
+  gsignin() {
+
   }
 }

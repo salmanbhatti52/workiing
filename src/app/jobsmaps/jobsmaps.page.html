@@ -38,20 +38,21 @@
 
 </ion-header>
 
-<ion-content>
+<ion-content style="--background: none;">
 
-  <!-- <capacitor-google-map #map></capacitor-google-map> -->
-  <img src="assets/imgs/map.svg" style="width: 100%;height: 100%;">
+  <capacitor-google-map #map></capacitor-google-map>
+  <!-- <img src="assets/imgs/map.svg" style="width: 100%;height: 100%;"> -->
 
   <div class="footercls">
     <div style="text-align: center;">
       <ion-button class="btn1" (click)="goToLogin()">Log In</ion-button>
       <ion-button class="btn2" (click)="goToSignup()">Sign up</ion-button>
     </div>
-    <p class="para">Or Continue with</p>
+    <p class="para">Or Continue with {{title}}</p>
+    <div [innerHtml]="test"></div>
     <div style="display: flex;
       justify-content: center;margin-top:5%;">
-      <img src="/assets/imgs/google.svg">
+      <img src="/assets/imgs/google.svg" (click)="gsignin()">
       <img src="/assets/imgs/facebook.svg" style="margin-left: 6%;">
     </div>
   </div>

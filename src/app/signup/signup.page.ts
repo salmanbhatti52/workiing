@@ -103,6 +103,8 @@ export class SignupPage implements OnInit {
     this.rest.sendRequest('signup', datasend).subscribe((res: any) => {
       console.log('response--', res);
       if (res.status == "success") {
+        this.extra.email = res.data[0].email
+        this.extra.name = res.data[0].first_name + res.data[0].last_name
         localStorage.setItem("userdata", JSON.stringify(res.data[0]));
         localStorage.setItem('users_customers_id', res.data[0].users_customers_id)
         this.extra.hideLoader();

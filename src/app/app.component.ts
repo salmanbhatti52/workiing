@@ -1,3 +1,4 @@
+import { LoadingService } from './services/loading.service';
 import { Component } from '@angular/core';
 import { SplashScreen } from '@capacitor/splash-screen';
 import { NavController, Platform } from '@ionic/angular';
@@ -28,7 +29,8 @@ export class AppComponent {
     { title: 'Logout', url: '/signin', icon: 'menulogout.svg' },
   ];
   constructor(public platform: Platform,
-    public navCtrl: NavController) {
+    public navCtrl: NavController,
+    public extra: LoadingService) {
     console.log('users_customers_id', localStorage.getItem('users_customers_id'));
 
     // if (localStorage.getItem('users_customers_id') == null) {
@@ -39,6 +41,7 @@ export class AppComponent {
   }
 
   ngOnInit() {
+
 
     this.platform.ready().then(() => {
       setTimeout(() => {
